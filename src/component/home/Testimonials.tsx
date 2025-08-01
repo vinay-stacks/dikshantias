@@ -103,7 +103,7 @@ const Testimonials = () => {
 
     return (
         <section className="py-5 md:py-5">
-            <div className="mx-auto sm:px-6 lg:px-8 max-w-7xl">
+            <div className="mx-auto px-3 lg:px-8 max-w-7xl">
 
                 {/* Section Header */}
                 <div className="mb-12 md:mb-16">
@@ -118,12 +118,10 @@ const Testimonials = () => {
                 {/* Testimonials Slider */}
                 <div className="relative">
                     <div className="bg-slate-900 rounded-2xl md:rounded-3xl shadow-xl relative overflow-hidden">
-
                         {/* Decorative Quote Icon */}
                         <div className="absolute top-4 right-4 md:top-6 md:right-6 opacity-10 z-10">
                             <Quote className="w-16 h-16 md:w-24 md:h-24 text-yellow-400" />
                         </div>
-
                         {/* Testimonials Container with Sliding Effect */}
                         <div className="relative w-full overflow-hidden">
                             <div
@@ -138,10 +136,10 @@ const Testimonials = () => {
                                             {/* Profile Image and Basic Info */}
                                             <div className="md:col-span-2 text-center">
                                                 <div className="relative inline-block mb-4 md:mb-6">
-                                                <img
-                                                    src={testimonial.image}
-                                                    alt={testimonial.name}
-                                                    className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full mx-auto shadow-lg border-4 border-rose-100"
+                                                    <img
+                                                        src={testimonial.image}
+                                                        alt={testimonial.name}
+                                                        className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full mx-auto shadow-lg border-4 border-rose-100"
                                                     />
                                                 </div>
 
@@ -166,7 +164,7 @@ const Testimonials = () => {
                                                 {/* Quote */}
                                                 <div>
                                                     <Quote className="w-8 h-8 md:w-12 md:h-12 text-orange-300 mb-3 md:mb-4" />
-                                                    <blockquote className="text-base sm:text-lg md:text-xl text-gray-50 leading-relaxed italic">
+                                                    <blockquote className="text-lg md:text-xl text-gray-50 leading-relaxed italic px-9 md:px-6">
                                                         &quot;{testimonial.quote}&quot;
                                                     </blockquote>
                                                 </div>

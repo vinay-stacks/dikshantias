@@ -29,7 +29,7 @@ const BestIasCoaching: React.FC = () => {
     },
     {
       id: 2,
-      title: 'Offline Courses',
+      title: 'Distance Learning Program',
       subtitle: 'Show more',
       bgColor: 'bg-purple-300',
       circleColor: 'bg-purple-500',
@@ -38,7 +38,7 @@ const BestIasCoaching: React.FC = () => {
     },
     {
       id: 3,
-      title: 'Distance Learning',
+      title: 'Test Series',
       subtitle: 'Show more',
       bgColor: 'bg-yellow-200',
       circleColor: 'bg-yellow-500',
@@ -47,22 +47,22 @@ const BestIasCoaching: React.FC = () => {
     },
     {
       id: 4,
-      title: 'Test Series',
+      title: 'Scholarship',
       subtitle: 'Show more',
       bgColor: 'bg-rose-200',
       circleColor: 'bg-rose-300',
       icon: <FileText className="w-8 h-8 text-rose-700" />,
       image: '/api/placeholder/200/150'
-    },
-     {
-      id: 5,
-      title: 'Scholarship',
-      subtitle: 'Show more',
-      bgColor: 'bg-blue-200',
-      circleColor: 'bg-blue-300',
-      icon: <FileText className="w-8 h-8 text-blue-700" />,
-      image: '/api/placeholder/200/150'
     }
+    //  {
+    //   id: 5,
+    //   title: 'Scholarship',
+    //   subtitle: 'Show more',
+    //   bgColor: 'bg-blue-200',
+    //   circleColor: 'bg-blue-300',
+    //   icon: <FileText className="w-8 h-8 text-blue-700" />,
+    //   image: '/api/placeholder/200/150'
+    // }
   ];
 
   // Calculate slides to show based on screen size

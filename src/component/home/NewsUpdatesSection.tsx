@@ -28,9 +28,9 @@ const NewsUpdatesSection = () => {
     {
       id: 1,
       type: 'Announcement',
-      title: 'New Batch Starting: UPSC Prelims 2024',
-      description: 'Comprehensive preparation program for UPSC CSE 2024 with expert faculty and updated syllabus coverage.',
-      date: 'December 15, 2023',
+      title: 'Boosting the Capacity of Legal Aid Systems in India (GS Paper 2, Social Justice)',
+      description: 'India’s legal aid system is built on a powerful idea — that justice should not depend on one’s ability to pay for it',
+      date: 'July 31, 2025',
       readTime: '3 min read',
       image: 'https://images.pexels.com/photos/7092615/pexels-photo-7092615.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop',
       category: 'announcement'
@@ -38,9 +38,9 @@ const NewsUpdatesSection = () => {
     {
       id: 2,
       type: 'Results',
-      title: 'UPSC Result 2023: Outstanding Performance',
-      description: '50+ students from Dikshant IAS secure positions in top 500 ranks of UPSC Civil Services Examination 2023.',
-      date: 'December 10, 2023',
+      title: 'From Assam to Cambodia: How the Hargila Army Became a Global Inspiration (GS Paper 1, Indian Society)',
+      description: 'In the heart of Assam, India, a group of village women stood up for a bird many considered ugly and unwanted',
+      date: 'July 31, 2025',
       readTime: '5 min read',
       image: 'https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop',
       category: 'results'
@@ -48,19 +48,22 @@ const NewsUpdatesSection = () => {
     {
       id: 3,
       type: 'Event',
-      title: 'Free Webinar: Current Affairs Strategy',
-      description: 'Join our expert faculty for an exclusive session on mastering current affairs for UPSC preparation.',
-      date: 'December 8, 2023',
+      title: 'Judicial Discretion in POCSO Bail: Legal Grey Zones and Recent Trends (GS Paper 2, Governance)',
+      description: 'A special POCSO court in Mumbai recently granted bail to a 40-year-old teacher accused of sexually assaulting a minor, citing a consensual relationship.',
+      date: 'July 31, 2025',
       readTime: '2 min read',
       image: 'https://images.pexels.com/photos/4050320/pexels-photo-4050320.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop',
       category: 'event'
     }
+    
   ];
 
   const importantUpdates = [
-    'UPSC CSE 2024 Notification Released - Apply Before Last Date',
-    'Mock Test Series for Prelims 2024 Now Available',
-    'New Study Material Updated with Latest Syllabus Changes'
+    'Boosting the Capacity of Legal Aid Systems in India (GS Paper 2, Social Justice)',
+    'From Assam to Cambodia: How the Hargila Army Became a Global Inspiration (GS Paper 1, Indian Society)',
+    'Judicial Discretion in POCSO Bail: Legal Grey Zones and Recent Trends (GS Paper 2, Governance)',
+    'Girl Child Trafficking in India (GS Paper 2 – Issues Related to Children, Women and Vulnerable Sections)',
+    'Flash Floods in India: Causes, Climate Links & Regional Adaptation Strategies (GS 3, Environment & Disaster Management)'
   ];
 
   const quickResources: QuickResource[] = [

@@ -21,7 +21,7 @@ function SuccessStart() {
                                 width={300}
                                 height={300}
                                 className="w-10 h-10 md:w-16 md:h-16 rounded-lg mx-auto" />
-                                <h3 className='font-bold mt-2 text-gray-800 text-sm md:text-lg'>Explore All Programs</h3>
+                                <h3 className='font-bold mt-2 text-gray-800 text-sm md:text-[16px]'>Explore All Programs</h3>
                         </div>
                         <div className='bg-white w-full text-center p-5 md:p-10 rounded-lg shadow-md'>
                             <Image
@@ -30,7 +30,7 @@ function SuccessStart() {
                                 width={300}
                                 height={300}
                                 className="w-10 h-10 md:w-16 md:h-16 rounded-lg mx-auto" />
-                                <h3 className='font-bold mt-2 text-gray-800 text-sm md:text-lg'>Enroll Now</h3>
+                                <h3 className='font-bold mt-2 text-gray-800 text-sm md:text-[16px]'>Enroll Now</h3>
                         </div>
                         
                     </div>

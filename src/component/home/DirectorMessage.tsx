@@ -1,0 +1,105 @@
+'use client'
+import Image from 'next/image';
+import React from 'react';
+
+interface FounderProfile {
+    id: number;
+    name: string;
+    title: string;
+    company: string;
+    description: string;
+    image?: string;
+    hasImage: boolean;
+}
+
+const DirectorMessage: React.FC = () => {
+    const founders: FounderProfile[] = [
+        {
+            id: 1,
+            name: "Dr. S.S. Pandey",
+            title: "Founder & CEO of Dikshant IAS",
+            company: "Dikshant IAS",
+            description: "Dr. SS Pandey is a contemporary sociologist from India who has been sensitive to contemporary social issues along with having a deep understanding of human society. Dr. SS Pandey has done PhD in Industrial Sociology from the Sociology Department of Banaras Hindu University and in the UNESCOchair project Vidya India, eminent anthropologist Dr. R. N. Worked as Research Assistant with Sasaram.",
+            hasImage: true,
+            image: "/img/ss-pandey.webp"
+        },
+        {
+            id: 2,
+            name: "Ashutosh Pandey",
+            title: "Teacher",
+            company: "Dikshant IAS",
+            description: "Ashutosh Pandey, a renowned educator at Dikshant IAS, is known for his in-depth knowledge and student-centric approach to UPSC preparation. With a strong command over current affairs and polity, he simplifies complex topics, making learning effective and engaging. His guidance at Dikshant IAS has helped numerous aspirants achieve their civil services dreams with confidence and clarity.",
+            hasImage: true,
+            image: "/img/ashutosh-pandey.webp"
+        }
+    ];
+
+    return (
+        <>
+            <div className='bg-[#ecf4fc] pb-18 px-2'>
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        {founders.map((founder) => (
+                            <div
+                                key={founder.id}
+                                className="group bg-white rounded-xl shadow-md hover:shadow-xl p-2 Md:p-0 text-center md:text-left transition-all duration-300 transform hover:-translate-y-2 overflow-hidden "
+                            >
+                                <div className="flex flex-col md:flex-row h-full">
+                                    {/* Image Section */}
+                                    <div className="md:w-70 w-40 h-40 mx-auto rounded-full md:rounded-none md:h-auto bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center overflow-hidden group-hover:from-blue-50 group-hover:to-blue-100 transition-all duration-300">
+                                        <div className="w-full h-full bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center">
+                                            <Image width={500} height={600}
+                                                src={founder.image}
+                                                alt={founder.name}
+                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    {/* Content Section */}
+                                    <div className="flex-1 py-4 px-2 md:p-6 ">
+                                        <div className="h-full flex flex-col">
+                                            {/* Header */}
+                                            <div className="mb-4">
+                                                <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors duration-300">
+                                                    {founder.name}
+                                                </h2>
+                                                <p className="text-green-600 font-medium text-sm mb-1 group-hover:text-red-600 transition-colors duration-300">
+                                                    {founder.title}
+                                                </p>
+                                            </div>
+
+                                            {/* Description */}
+                                            <div className="flex-1">
+                                                <p className="text-gray-900 text-md text-justify leading-relaxed mb-4 group-hover:text-gray-800 transition-colors duration-300">
+                                                    {founder.description}
+                                                </p>
+                                            </div>
+
+                                            {/* Read More Link */}
+                                            <div className="mt-auto mx-auto md:mx-0">
+                                                <button className="text-blue-500 font-semibold text-sm hover:text-blue-300 hover:underline transition-all duration-300 flex items-center group/btn">
+                                                    Read More
+                                                    <svg
+                                                        className="w-4 h-4 ml-1 transform group-hover/btn:translate-x-1 transition-transform duration-300"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        viewBox="0 0 24 24"
+                                                    >
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+};
+
+export default DirectorMessage;

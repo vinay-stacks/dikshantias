@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import { ChevronDown, Menu, X, Phone, Play, ChevronRight, Speech } from 'lucide-react';
 import Image from 'next/image';
 
-interface HeaderProps { }
+// type HeaderProps = Record<string, never>;
 
-const Header: React.FC<HeaderProps> = () => {
+const Header: React.FC = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
     const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
@@ -35,20 +35,26 @@ const Header: React.FC<HeaderProps> = () => {
         <div className="w-full">
             {/* Top Banner */}
             <div className="bg-[#f43144] text-white text-center py-1 px-4 items-center">
-                <div className='max-w-7xl mx-auto flex justify-between items-center'>
+                <div className='max-w-7xl mx-auto flex justify-between  items-center'>
                     <div className="text-sm md:text-lg font-medium">
-                        Special welcome gift. Get 30% off your first Registration with code "DIKSHANT". Find out more!
+                        Special welcome gift. Get 30% off your first Registration with code DIKSHANT. Find out more!
                     </div>
                     {/* Live Demo Button with Blink Animation */}
-                    <button className="relative hidden sm:flex items-center space-x-2 bg-white text-red-600 px-4 py-2 rounded">
-                        <span className="absolute inline-flex h-5 w-5 animate-ping rounded-full bg-red-400 opacity-75 left-3"></span>
-                        <Play className="w-4 h-4" />
-                        <span className="font-medium  hover:text-red-600 animate-pulse">Live Demo</span>
-                    </button>
-                    {/* <span className="relative flex size-3">
-                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
-                        <span className="relative inline-flex size-3 rounded-full bg-sky-500">sfdsdfs</span>
-                    </span> */}
+
+                    <div className='flex gap-4'>
+                        <button className="relative hidden sm:flex items-center space-x-2 bg-white text-red-600 px-4 py-2 rounded">
+                            <span className="absolute inline-flex h-5 w-5 animate-ping rounded-full bg-red-400 opacity-75 left-3"></span>
+                            <Play className="w-4 h-4" />
+                            <span className="font-medium  hover:text-red-600 animate-pulse">Live Demo</span>
+                        </button>
+                        <button className="relative hidden sm:flex items-center space-x-2 bg-white text-red-600 px-4 py-2 rounded">
+                            <span className="font-medium  hover:text-red-600 animate-pulse">HIN</span>
+                        </button>
+                        <button className="relative hidden sm:flex items-center space-x-2 bg-white text-red-600 px-4 py-2 rounded">
+                            <span className="font-medium  hover:text-red-600 animate-pulse">EN</span>
+                        </button>
+                    </div>
+
                 </div>
 
             </div>
@@ -60,16 +66,16 @@ const Header: React.FC<HeaderProps> = () => {
                         {/* Logo */}
                         <div className="flex items-center space-x-2">
                             <div className='logo w-[150px] md:w-[200px]'>
-                                <Image src={'/img/dikshant-logo.png'} alt="Logo" width={200} height={100} />
+                               <a href=''> <Image src={'/img/dikshant-logo.png'} alt="Logo" width={200} height={100} /></a>
                             </div>
                         </div>
 
                         {/* Desktop Navigation */}
-                        <nav className="hidden lg:flex items-center space-x-8">
+                        <nav className="hidden lg:flex items-center space-x-4">
                             {/* Home */}
                             <div className="relative">
                                 <button className="flex items-center space-x-1 text-gray-900 hover:text-red-500 font-medium py-2">
-                                    <span>About Us</span>
+                                  <a href='/about-us'>About Us</a>
                                 </button>
                             </div>
 
@@ -149,7 +155,7 @@ const Header: React.FC<HeaderProps> = () => {
                             {/* Phone Number (Hidden on mobile) */}
                             <div className="hidden md:flex items-center space-x-2 text-gray-900">
                                 <div className='bg-red-100 p-3 rounded-full'>
-                                <Phone className="w-5 h-5" />
+                                    <Phone className="w-5 h-5" />
                                 </div>
                                 <div className="text-sm">
                                     <div className="text-xs text-gray-500">Talk to our experts</div>
@@ -196,7 +202,7 @@ const Header: React.FC<HeaderProps> = () => {
                     </div>
                     <div className="max-w-5xl flex-1 overflow-hidden text-end">
                         <div className="animate-marquee whitespace-nowrap text-gray-900 text-md">
-                           <p className='text-sm md:text-lg font-bold'> 🚧 We're Currently Improving Your Experience! Our site is undergoing maintenance to bring you a better and smoother experience. We appreciate your patience and understanding. Please check back soon! 🚧</p>
+                            <p className='text-sm md:text-lg font-bold'> 🚧 We&apos;re Currently Improving Your Experience! Our site is undergoing maintenance to bring you a better and smoother experience. We appreciate your patience and understanding. Please check back soon! 🚧</p>
                         </div>
                     </div>
                 </div>
@@ -298,14 +304,14 @@ const Header: React.FC<HeaderProps> = () => {
                             <div className="border-b border-gray-200">
                                 <a href="#" className="block py-2 text-gray-900 hover:text-red-500 font-medium">Blog</a>
                             </div>
-                   
+
                         </nav>
 
                         {/* Mobile Actions */}
                         <div className="mt-8 space-y-4">
                             <div className="flex items-center space-x-2 text-gray-600 p-3 bg-gray-50 rounded">
                                 <div className='bg-red-500 rounded-full p-3'>
-                                <Phone className="w-5 h-5 text-white" />
+                                    <Phone className="w-5 h-5 text-white" />
                                 </div>
                                 <div className="text-sm">
                                     <div className="text-xs text-gray-500">Talk to our experts</div>

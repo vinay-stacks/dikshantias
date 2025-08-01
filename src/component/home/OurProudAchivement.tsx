@@ -115,7 +115,7 @@ export default function OurProudAchivement() {
   }
 
   return (
-    <div className="py-5 px-2 md:px-4" style={{ backgroundColor: "#fff" }}>
+    <div className="py-5 px-2 md:px-4 mb-20" style={{ backgroundColor: "#fff" }}>
       <div className="max-w-7xl md:mx-auto">
 
         {/* Toppers Section */}

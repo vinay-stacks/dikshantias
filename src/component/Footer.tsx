@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Instagram, Youtube, Linkedin, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Youtube, Linkedin, Twitter, Send } from 'lucide-react';
 import Image from 'next/image';
 
 interface FooterLink {
@@ -85,7 +85,8 @@ const Footer: React.FC = () => {
     { icon: Instagram, href: "https://instagram.com/dikshantias", label: "Instagram" },
     { icon: Youtube, href: "https://youtube.com/dikshantias", label: "YouTube" },
     { icon: Linkedin, href: "https://linkedin.com/company/dikshantias", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com/dikshantias", label: "Twitter" }
+    { icon: Twitter, href: "https://twitter.com/dikshantias", label: "Twitter" },
+    { icon: Send, href: "https://t.me/dikshantias", label: "Telegram" }
   ];
 
   return (
@@ -149,7 +150,7 @@ const Footer: React.FC = () => {
             Skills Required to Excel in UPSC CSE
           </h3>
           <p className="text-sm text-gray-700 mb-4 leading-relaxed">
-           The Preliminary Examination serves as an initial screening stage, designed to assess a candidate's fundamental knowledge and cognitive aptitude, helping identify serious contenders for the Mains. The Mains Examination delves deeper, testing an aspirant’s capacity for critical thinking, analytical reasoning, and effective written communication through structured and insightful answers. The final stage, the Interview (Personality Test), evaluates the candidate's intellectual depth, social awareness, and interpersonal skills — qualities essential for a successful career in the Civil Services.
+           The Preliminary Examination serves as an initial screening stage, designed to assess a candidate&apos;s fundamental knowledge and cognitive aptitude, helping identify serious contenders for the Mains. The Mains Examination delves deeper, testing an aspirant’s capacity for critical thinking, analytical reasoning, and effective written communication through structured and insightful answers. The final stage, the Interview (Personality Test), evaluates the candidate&apos;s intellectual depth, social awareness, and interpersonal skills — qualities essential for a successful career in the Civil Services.
           </p>
 
           <h3 className="text-base font-semibold text-gray-900 mb-3">
@@ -216,12 +217,13 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Download App */}
-          <div className="text-right">
-            <h4 className="text-sm font-medium text-gray-900 mb-3">Download App</h4>
-            <div className="flex space-x-2">
+          <div className="text-right bg-red-500 rounded-sm">
+            <h4 className="text-sm font-medium text-gray-50 my-3 mx-1
+            ">Download App</h4>
+            {/* <div className="flex space-x-2">
               <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
               <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -233,11 +235,11 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Chat Button */}
-        <div className="fixed bottom-6 right-6">
+        {/* <div className="fixed bottom-6 right-6">
           <button className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-blue-700 transition-colors">
             💬
           </button>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

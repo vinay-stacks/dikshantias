@@ -10,12 +10,12 @@ export default function HeroSlider() {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const courses = [
-        { name: "Online Courses", color: "bg-purple-200", icon: "⏰" },
-        { name: "Offline Course", color: "bg-yellow-200", icon: "🎥" },
-        { name: "Mentorship Programme", color: "bg-green-200", icon: "🏫" },
-        { name: "Essay Answer Writing", color: "bg-pink-200", icon: "✍️" },
-        { name: "Interview Guidance", color: "bg-red-200", icon: "📚" },
-        { name: "E-Learning", color: "bg-blue-200", icon: "👥" },
+        { name: "E-Learning", color: "bg-purple-200", icon: "⏰" },
+        { name: "What to Read in The Hindu", color: "bg-yellow-200", icon: "🎥" },
+        { name: "What to  Read in The Indian Express", color: "bg-green-200", icon: "🏫" },
+        { name: "Daily Current Affairs", color: "bg-pink-200", icon: "✍️" },
+        { name: "Editorial Analysis", color: "bg-red-200", icon: "📚" },
+        { name: "Important Facts of the Day ", color: "bg-blue-200", icon: "👥" },
     ];
     const slides = [
         { id: 1, title: 'Slide 1', image: '/img/hero-slider.jpg' },
@@ -34,7 +34,7 @@ export default function HeroSlider() {
                     spaceBetween={20}
                     slidesPerView={1}
                     autoplay={{
-                        delay: 3000,
+                        delay: 6000,
                         disableOnInteraction: false,
                     }}
                     pagination={{ clickable: true }}
@@ -71,7 +71,7 @@ export default function HeroSlider() {
                             className={`flex-shrink-0 md:w-48 w-44 md:h-32 h-26 ${course.color} rounded-lg flex flex-col text-center p-4`}
                         >
                             <span className="text-3xl mb-2">{course.icon}</span>
-                            <span className="text-sm md:text-lg font-bold">{course.name}</span>
+                            <span className="text-sm md:text-[16px] font-bold text-gray-900">{course.name}</span>
                             {/* <span className="text-sm text-gray-600">›</span> */}
                         </div>
                     ))}
