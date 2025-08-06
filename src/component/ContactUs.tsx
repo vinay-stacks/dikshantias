@@ -131,7 +131,7 @@ const ContactUs: React.FC = () => {
                     <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
                         <h2 className="text-3xl font-bold text-slate-800 mb-8">Do you have any questions?</h2>
                          <p className="text-slate-600 mb-8 leading-relaxed -mt-5">
-                                Have a question or just want to say hi? We'd love to hear from you.
+                                Have a question or just want to say hi? We&apos;d love to hear from you.
                             </p>
 
                         <div className="space-y-6">

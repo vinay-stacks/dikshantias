@@ -55,7 +55,7 @@ const AshutoshDixit = () => {
           <div className="mt-6">
             <h2 className="text-lg font-semibold text-gray-800 mb-2">About Me</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              Hi, my name is Adrian Brewer, I'm the Co-founder and Head of Design at BB agency. Designer at heart.
+              Hi, my name is Adrian Brewer, I&apos;m the Co-founder and Head of Design at BB agency. Designer at heart.
               <br />
               <br />
               Head of Design might be an overstatement, but as with many 20 people agencies I need to wear many different hats. I manage creative teams and set up processes that allow our collaborators and clients to achieve growth, scalability, and progress.
