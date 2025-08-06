@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 interface FounderProfile {
@@ -8,8 +9,9 @@ interface FounderProfile {
     title: string;
     company: string;
     description: string;
-    image?: string;
     hasImage: boolean;
+    image?: string;
+    url: string;
 }
 
 const DirectorMessage: React.FC = () => {
@@ -21,7 +23,8 @@ const DirectorMessage: React.FC = () => {
             company: "Dikshant IAS",
             description: "Dr. SS Pandey is a contemporary sociologist from India who has been sensitive to contemporary social issues along with having a deep understanding of human society. Dr. SS Pandey has done PhD in Industrial Sociology from the Sociology Department of Banaras Hindu University and in the UNESCOchair project Vidya India, eminent anthropologist Dr. R. N. Worked as Research Assistant with Sasaram.",
             hasImage: true,
-            image: "/img/ss-pandey.webp"
+            image: "/img/ss-pandey.webp",
+            url:"https://drsspandey.com/"
         },
         {
             id: 2,
@@ -30,7 +33,8 @@ const DirectorMessage: React.FC = () => {
             company: "Dikshant IAS",
             description: "Ashutosh Pandey, a renowned educator at Dikshant IAS, is known for his in-depth knowledge and student-centric approach to UPSC preparation. With a strong command over current affairs and polity, he simplifies complex topics, making learning effective and engaging. His guidance at Dikshant IAS has helped numerous aspirants achieve their civil services dreams with confidence and clarity.",
             hasImage: true,
-            image: "/img/ashutosh-pandey.webp"
+            image: "/img/ashutosh-pandey.webp",
+            url:"/ashutosh-dixit-profile"
         }
     ];
 
@@ -48,8 +52,10 @@ const DirectorMessage: React.FC = () => {
                                     {/* Image Section */}
                                     <div className="md:w-70 w-40 h-40 mx-auto rounded-full md:rounded-none md:h-auto bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center overflow-hidden group-hover:from-blue-50 group-hover:to-blue-100 transition-all duration-300">
                                         <div className="w-full h-full bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center">
-                                            <Image width={500} height={600}
-                                                src={founder.image}
+                                            <Image
+                                                width={500}
+                                                height={600}
+                                                src={founder.image ?? '/default-image.jpg'} 
                                                 alt={founder.name}
                                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                             />
@@ -78,7 +84,7 @@ const DirectorMessage: React.FC = () => {
 
                                             {/* Read More Link */}
                                             <div className="mt-auto mx-auto md:mx-0">
-                                                <button className="text-blue-500 font-semibold text-sm hover:text-blue-300 hover:underline transition-all duration-300 flex items-center group/btn">
+                                                <Link href={founder.url} className="text-blue-500 font-semibold text-sm hover:text-blue-300 hover:underline transition-all duration-300 flex items-center group/btn">
                                                     Read More
                                                     <svg
                                                         className="w-4 h-4 ml-1 transform group-hover/btn:translate-x-1 transition-transform duration-300"
@@ -88,7 +94,7 @@ const DirectorMessage: React.FC = () => {
                                                     >
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                                     </svg>
-                                                </button>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>

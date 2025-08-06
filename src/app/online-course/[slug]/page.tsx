@@ -5,33 +5,39 @@ import { Star, Clock, Users, Globe, Award, Smartphone, Infinity, Check, Book, Ca
 import Image from 'next/image';
 import { Play } from 'next/font/google';
 
+
+interface BtnTypes {
+    id: string;
+    label: string;
+    isActive: boolean;
+    onClick: (id: number | string) => void;
+}
 const CoursePage = () => {
-    const [activeTab, setActiveTab] = useState('description');
+    const [activeTab, setActiveTab] = useState<string>('description');
     const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
     const [reviewRating, setReviewRating] = useState(0);
     const [reviewText, setReviewText] = useState('');
     const [reviewerName, setReviewerName] = useState('');
     const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
-    const TabButton = ({ id, label, isActive, onClick }) => (
+    const TabButton = ({ id, label, isActive, onClick }: BtnTypes) => (
         <button
             onClick={() => onClick(id)}
-            className={`py-2 font-bold text-lg border-b-2 transition-colors ${
-                isActive ? 'border-red-500 text-red-600' : 'border-transparent text-gray-600 hover:text-gray-800'
-            }`}
+            className={`py-2 font-bold text-lg border-b-2 transition-colors ${isActive ? 'border-red-500 text-red-600' : 'border-transparent text-gray-600 hover:text-gray-800'
+                }`}
         >
             {label}
         </button>
     );
 
-    const LearningPoint = ({ children }) => (
-        <div className="flex items-start gap-3 mb-3">
-            <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-            <p className="text-gray-700 text-sm leading-relaxed">{children}</p>
-        </div>
-    );
+    // const LearningPoint = ({ children }) => (
+    //     <div className="flex items-start gap-3 mb-3">
+    //         <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+    //         <p className="text-gray-700 text-sm leading-relaxed">{children}</p>
+    //     </div>
+    // );
 
-    const handleReviewSubmit = (e) => {
+    const handleReviewSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log('Review submitted:', { reviewerName, reviewRating, reviewText });
         setIsReviewModalOpen(false);
@@ -102,7 +108,7 @@ const CoursePage = () => {
                                     id="description"
                                     label="Course Overview"
                                     isActive={activeTab === 'description'}
-                                    onClick={setActiveTab}
+                                    onClick={() => setActiveTab}
                                 />
                             </nav>
                         </div>
@@ -149,27 +155,29 @@ const CoursePage = () => {
                                         <iframe
                                             width="100%"
                                             height="200"
-                                            className='rounded-xl'
+                                            className="rounded-xl"
                                             src="https://www.youtube.com/embed/D7AiQlz70DE"
-                                            title="Lecture 1 Sociology Optional New Foundation Class, 02 june 21"
-                                            frameborder="0"
+                                            title="Lecture 1 Sociology Optional New Foundation Class, 02 June 21"
+                                            frameBorder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerpolicy="strict-origin-when-cross-origin"
-                                            allowfullscreen
+                                            referrerPolicy="strict-origin-when-cross-origin"
+                                            allowFullScreen
                                         ></iframe>
+
                                         <h3 className='font-bold mt-2 text-blue-500'>Video Class 1</h3>
                                     </div>
                                     <div className='w-[100%] md:w-[20%] text-center'>
+                                       
                                         <iframe
                                             width="100%"
                                             height="200"
-                                            className='rounded-xl'
+                                            className="rounded-xl"
                                             src="https://www.youtube.com/embed/gEfVIgXsfGI"
-                                            title="Lecture 2 Sociology Optional New Foundation Class 03 june 21 2"
-                                            frameborder="0"
+                                            title="Lecture 1 Sociology Optional New Foundation Class, 02 June 21"
+                                            frameBorder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerpolicy="strict-origin-when-cross-origin"
-                                            allowfullscreen
+                                            referrerPolicy="strict-origin-when-cross-origin"
+                                            allowFullScreen
                                         ></iframe>
                                         <h3 className='font-bold mt-2 text-blue-500'>Video Class 2</h3>
                                     </div>
@@ -180,10 +188,10 @@ const CoursePage = () => {
                                             className='rounded-xl'
                                             src="https://www.youtube.com/embed/LvtaOh8_fyM"
                                             title="Lecture 1 Sociology Optional New Foundation Class, 02 june 21"
-                                            frameborder="0"
+                                            frameBorder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerpolicy="strict-origin-when-cross-origin"
-                                            allowfullscreen
+                                            referrerPolicy="strict-origin-when-cross-origin"
+                                            allowFullScreen
                                         ></iframe>
                                         <h3 className='font-bold mt-2 text-blue-500'>Video Class 3</h3>
                                     </div>
@@ -194,10 +202,10 @@ const CoursePage = () => {
                                             className='rounded-xl'
                                             src="https://www.youtube.com/embed/3q0wlrIBPHg"
                                             title="Lecture 1 Sociology Optional New Foundation Class, 02 june 21"
-                                            frameborder="0"
+                                            frameBorder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerpolicy="strict-origin-when-cross-origin"
-                                            allowfullscreen
+                                            referrerPolicy="strict-origin-when-cross-origin"
+                                            allowFullScreen
                                         ></iframe>
                                         <h3 className='font-bold mt-2 text-blue-500'>Video Class 4</h3>
                                     </div>
@@ -208,10 +216,10 @@ const CoursePage = () => {
                                             className='rounded-xl'
                                             src="https://www.youtube.com/embed/okLWlZJWvEM"
                                             title="Lecture 1 Sociology Optional New Foundation Class, 02 june 21"
-                                            frameborder="0"
+                                            frameBorder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerpolicy="strict-origin-when-cross-origin"
-                                            allowfullscreen
+                                            referrerPolicy="strict-origin-when-cross-origin"
+                                            allowFullScreen
                                         ></iframe>
                                         <h3 className='font-bold mt-2 text-blue-500'>Video Class 5</h3>
                                     </div>
@@ -354,7 +362,7 @@ const CoursePage = () => {
                                         />
                                         <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
                                             <div className="w-16 h-16 bg-red-500 bg-opacity-20 rounded-full animate-ping flex items-center justify-center">
-                                                <PlayIcon className='text-white hover:cursor-pointer'/>                                                
+                                                <PlayIcon className='text-white hover:cursor-pointer' />
                                             </div>
                                         </div>
                                     </button>
@@ -468,7 +476,7 @@ const CoursePage = () => {
                                     value={reviewText}
                                     onChange={(e) => setReviewText(e.target.value)}
                                     className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-500"
-                                    rows="4"
+                                    rows={4}
                                     required
                                 ></textarea>
                             </div>

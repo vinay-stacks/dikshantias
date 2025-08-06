@@ -1,11 +1,11 @@
 'use client'
-import { useState } from 'react'
+import { ReactElement, useState } from 'react'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 
 interface FaqItem {
-  id: number
-  title: string
-  content: JSX.Element
+  id: number,
+  title: string,
+  content: ReactElement
 }
 
 const faqs: FaqItem[] = [

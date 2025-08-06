@@ -5,16 +5,17 @@ import { Phone, Mail, MapPin, Send } from 'lucide-react';
 interface FormData {
     firstName: string;
     email: string;
-    subject: string;
     message: string;
+    phone?:string;
 }
 
 const ContactUs: React.FC = () => {
     const [formData, setFormData] = useState<FormData>({
         firstName: '',
         email: '',
-        subject: '',
+        phone: '',
         message: ''
+        
     });
 
     const [isSubmitting, setIsSubmitting] = useState(false);

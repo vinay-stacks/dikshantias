@@ -76,7 +76,7 @@ const Header: React.FC = () => {
                             {/* Home */}
                             <div className="relative">
                                 <button className="flex items-center space-x-1 text-gray-900 hover:text-red-500 font-medium py-2">
-                                  <a href='/about-us'>About Us</a>
+                                  <Link href='/about-us'>About Us</Link>
                                 </button>
                             </div>
 
@@ -144,7 +144,7 @@ const Header: React.FC = () => {
                                 onMouseLeave={handleMouseLeave}
                             >
                                 <button className="flex items-center space-x-1 text-gray-900 hover:text-red-500 font-medium py-2">
-                                    <span>Blog</span>
+                                    <Link href="/blogs">Blog</Link>
                                 </button>
 
                             </div>
@@ -302,7 +302,7 @@ const Header: React.FC = () => {
                                 <a href="/scholarship-programme" className="block py-2 text-gray-900 hover:text-red-500 font-medium">Scholarship Programme</a>
                             </div>
                             <div className="border-b border-gray-200">
-                                <a href="#" className="block py-2 text-gray-900 hover:text-red-500 font-medium">Blog</a>
+                                <Link href="/blogs" className="block py-2 text-gray-900 hover:text-red-500 font-medium">Blog</Link>
                             </div>
 
                         </nav>
