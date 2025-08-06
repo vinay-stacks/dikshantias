@@ -19,7 +19,7 @@ const DirectorMessage: React.FC = () => {
         {
             id: 1,
             name: "Dr. S.S. Pandey",
-            title: "Founder & CEO of Dikshant IAS",
+            title: "Educator & Founder, Dikshant IAS",
             company: "Dikshant IAS",
             description: "Dr. SS Pandey is a contemporary sociologist from India who has been sensitive to contemporary social issues along with having a deep understanding of human society. Dr. SS Pandey has done PhD in Industrial Sociology from the Sociology Department of Banaras Hindu University and in the UNESCOchair project Vidya India, eminent anthropologist Dr. R. N. Worked as Research Assistant with Sasaram.",
             hasImage: true,
@@ -29,12 +29,12 @@ const DirectorMessage: React.FC = () => {
         {
             id: 2,
             name: "Ashutosh Dixit",
-            title: "Teacher",
+            title: "Educator & CEO, Dikshant IAS",
             company: "Dikshant IAS",
-            description: "Ashutosh Pandey, a renowned educator at Dikshant IAS, is known for his in-depth knowledge and student-centric approach to UPSC preparation. With a strong command over current affairs and polity, he simplifies complex topics, making learning effective and engaging. His guidance at Dikshant IAS has helped numerous aspirants achieve their civil services dreams with confidence and clarity.",
+            description: "From the boardrooms of global corporations to the classrooms of aspiring civil servants, Ashutosh Dixit has carved a unique path—where corporate excellence meets educational transformation. A visionary leader with a heart for public good, Ashutosh Dixit today stands as a mentor, strategist, and nation-builder, steering one of India’s most socially committed institutions—Dikshant Education Centre Private Limited.",
             hasImage: true,
             image: "/img/ashutosh-pandey.webp",
-            url:"/ashutosh-dixit-profile"
+            url:"/ashutosh-dixit"
         }
     ];
 

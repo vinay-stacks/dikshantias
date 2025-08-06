@@ -1,28 +1,13 @@
 'use client';
 
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
 const BlogPage: React.FC = () => {
     return (
-        <div className="bg-white min-h-screen">
-            {/* Navigation */}
-            {/* <div className='max-w-7xl mx-auto'>
-             <nav className="w-full bg-blue-100 p-4 rounded shadow h-fit">
-                <ul className="space-y-2 flex">
-                    <li>
-                        <Link href="/" className="text-blue-600 hover:underline block">Home</Link>
-                    </li>
-                    <li>
-                        <Link href="/blog" className="text-blue-600 hover:underline block">Blog</Link>
-                    </li>
-                </ul>
-            </nav>
-           </div> */}
-
-
+        <>
+         <div className="bg-white min-h-screen">
             <div className="max-w-7xl mx-auto py-8 flex flex-col md:flex-row gap-8">
                 {/* Main Content */}
                 <main className="flex-1">
@@ -45,7 +30,7 @@ const BlogPage: React.FC = () => {
                                     Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry...
                                 </p>
                                 <p className="text-gray-600 text-sm mt-2">Blog • 20/08/2022</p>
-                                <a href="#" className="text-red-600 mt-2 inline-block">Read More →</a>
+                                <Link href="/blog-details" className="text-red-600 mt-2 inline-block">Read More →</Link>
                             </div>
                         ))}
                     </div>
@@ -87,6 +72,8 @@ const BlogPage: React.FC = () => {
                 </aside>
             </div >
         </div >
+        </>
+       
     );
 };
 

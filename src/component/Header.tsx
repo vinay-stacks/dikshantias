@@ -16,9 +16,9 @@ const Header: React.FC = () => {
         setOpenMobileDropdown(null);
     };
 
-    const handleDropdownToggle = (menu: string) => {
-        setOpenDropdown(openDropdown === menu ? null : menu);
-    };
+    // const handleDropdownToggle = (menu: string) => {
+    //     setOpenDropdown(openDropdown === menu ? null : menu);
+    // };
 
     const handleMobileDropdownToggle = (menu: string) => {
         setOpenMobileDropdown(openMobileDropdown === menu ? null : menu);
@@ -62,12 +62,12 @@ const Header: React.FC = () => {
 
             {/* Main Header */}
             <div className="bg-white shadow-sm md:py-2">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-0">
                     <div className="flex items-center justify-between h-14 md:h-16">
                         {/* Logo */}
-                        <div className="logo w-[150px] md:w-[200px]">
+                        <div className="logo w-[150px] md:w-[160px]">
                              <Link href='/' className='logo'>
-                                    <Image src={'/img/dikshant-logo.png'} alt="Logo" width={200} height={100} />
+                                    <Image src={'/img/dikshant-logo.png'} alt="Logo" width={160} height={100} />
                             </Link>                   
                         </div>
 
