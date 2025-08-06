@@ -131,7 +131,7 @@ const AshutoshDixit = () => {
                              <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-4">A Visionary Leader with a Human Touch</h3>
 
                             <p className="text-gray-900 leading-relaxed">Ashutosh Dixit is not just managing an education company—he’s sculpting futures. His leadership continues to inspire other professionals to pivot from success to significance, proving that true nation-building lies in enabling others to rise.</p>
-                            <p className="text-gray-900 leading-relaxed">“When we educate one student, we don't just create an officer. We create a ripple that touches a thousand lives.”</p>
+                            <p className="text-gray-900 leading-relaxed">“When we educate one student, we don&lsquo;t just create an officer. We create a ripple that touches a thousand lives.”</p>
 
                         </div>
                     </div>
