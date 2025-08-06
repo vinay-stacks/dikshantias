@@ -78,11 +78,9 @@ export default function TabBestIasCoachingCenter() {
                                     onClick={() => setActiveTab(tab.id)}
                                     className={`
                 w-full md:h-auto md:w-130 text-left px-6 py-4 rounded-full text-white font-medium md:text-xl
-                transition-all duration-300 transform hover:scale-105 shadow-lg
-                ${tab.color} ${tab.hoverColor}
-                ${activeTab === tab.id ? 'ring-4 ring-white ring-opacity-50 scale-105' : 'hover:shadow-xl'}
-              `}
-                                >
+                transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl
+                ${tab.color} ${tab.hoverColor}              
+              `}>
                                     {tab.title}
                                 </button>
                             ))}

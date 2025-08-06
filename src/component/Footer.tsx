@@ -55,7 +55,6 @@ const Footer: React.FC = () => {
         { name: "Pariskshan Prelims", href: "/pariskshan-prelims" },
         { name: "Pariskshan Mains", href: "/pariskshan-mains" },
         { name: "Open Test", href: "/open-test" },
-        { name: "Blog", href: "" },
         { name: "Pratispartha", href: "/pratispartha" },  
         { name: "Vision Publication", href: "/vision-publication" }
       ]
@@ -65,8 +64,10 @@ const Footer: React.FC = () => {
       links: [
         { name: "About Us", href: "/about" },
         { name: "Our Centers", href: "/centers" },
-        { name: "FAQ", href: "/faq" },
-        { name: "Syllabus", href: "/syllabus" }
+        { name: "FAQs", href: "/faqs" },
+        { name: "Gallery", href: "/gallery" },
+        { name: "Contact Us", href: "/contact-us" },
+        { name: "Blog", href: "blogs" },
       ]
     },
     {

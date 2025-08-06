@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, Menu, X, Phone, Play, ChevronRight, Speech } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // type HeaderProps = Record<string, never>;
 
@@ -64,10 +65,10 @@ const Header: React.FC = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-14 md:h-16">
                         {/* Logo */}
-                        <div className="flex items-center space-x-2">
-                            <div className='logo w-[150px] md:w-[200px]'>
-                               <a href=''> <Image src={'/img/dikshant-logo.png'} alt="Logo" width={200} height={100} /></a>
-                            </div>
+                        <div className="logo w-[150px] md:w-[200px]">
+                             <Link href='/' className='logo'>
+                                    <Image src={'/img/dikshant-logo.png'} alt="Logo" width={200} height={100} />
+                            </Link>                   
                         </div>
 
                         {/* Desktop Navigation */}
@@ -78,6 +79,8 @@ const Header: React.FC = () => {
                                   <a href='/about-us'>About Us</a>
                                 </button>
                             </div>
+
+                             <a href="/scholarship-programme" className="text-gray-900 hover:text-red-500 font-medium py-2">Scholarship Programme</a>
 
                             {/* Courses Dropdown */}
                             <div
@@ -91,9 +94,8 @@ const Header: React.FC = () => {
                                 </button>
                                 {openDropdown === 'courses' && (
                                     <div className="absolute top-full left-0 w-56 bg-white shadow-lg rounded-md py-2 z-50">
-                                        <a href="#" className="block px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">Offline Mode</a>
-                                        <a href="#" className="block px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">Online Mode</a>
-
+                                        <Link href="/online-course" className="block px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">Online Mode</Link>
+                                        <Link href="#" className="block px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">Offline Mode</Link>
                                     </div>
                                 )}
                             </div>
@@ -110,7 +112,7 @@ const Header: React.FC = () => {
                                 </button>
                                 {openDropdown === 'pages' && (
                                     <div className="absolute top-full left-0 w-70 bg-white shadow-lg rounded-md py-2 z-50">
-                                        <a href="#" className="block px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">What To Read In the Hindu</a>
+                                        <a href="/current-affairs/what-we-ready-in-hindu" className="block px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">What To Read In the Hindu</a>
                                         <a href="#" className="block px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">What To Read In The Indian Express</a>
                                         <a href="#" className="block px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">Editorial Analysis</a>
                                         <a href="#" className="block px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">Daily Current Affairs Analysis</a>
@@ -133,9 +135,7 @@ const Header: React.FC = () => {
                                         <a href="#" className="block px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">FAQ</a>
                                     </div>
                                 )}
-                            </div>
-
-                            <a href="#" className="text-gray-900 hover:text-red-500 font-medium py-2">Scholarship Programme</a>
+                            </div>                          
 
                             {/* Blog Dropdown */}
                             <div
@@ -222,9 +222,9 @@ const Header: React.FC = () => {
                         {/* Close Button */}
                         <div className="flex justify-between items-center mb-8">
                             <div className="flex items-center space-x-2">
-                                <div className='logo'>
+                                <Link href='/' className='logo'>
                                     <Image src={'/img/dikshant-logo.png'} alt="Logo" width={200} height={100} />
-                                </div>
+                                </Link>
                             </div>
                             <button onClick={toggleMobileMenu} className="p-2 text-gray-600 hover:text-gray-700">
                                 <X className="w-6 h-6" />
@@ -235,7 +235,7 @@ const Header: React.FC = () => {
                         <nav className="">
                             {/* Home */}
                             <div className="border-b border-gray-200">
-                                <a href="#" className="block py-1 text-gray-900 hover:text-red-500 font-medium">About us</a>
+                                <a href="/about-us" className="block py-1 text-gray-900 hover:text-red-500 font-medium">About us</a>
                             </div>
 
                             {/* Courses Dropdown */}
@@ -249,8 +249,8 @@ const Header: React.FC = () => {
                                 </button>
                                 <div className={`overflow-hidden transition-all duration-300 ${openMobileDropdown === 'courses' ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}>
                                     <div className="ml-4 space-y-2 pt-2">
-                                        <a href="#" className="block border-b border-gray-200 py-1 text-gray-700 hover:text-red-500">Offline Mode</a>
-                                        <a href="#" className="block py-1 text-gray-700 hover:text-red-500">Online Mode</a>
+                                        <Link href="/online-course" className="block py-1 text-gray-700 hover:text-red-500">Online Mode</Link>
+                                        <Link href="#" className="block border-b border-gray-200 py-1 text-gray-700 hover:text-red-500">Offline Mode</Link>
 
                                     </div>
                                 </div>
@@ -267,11 +267,11 @@ const Header: React.FC = () => {
                                 </button>
                                 <div className={`overflow-hidden transition-all duration-300 ${openMobileDropdown === 'pages' ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}`}>
                                     <div className="ml-4 space-y-2 pt-2">
-                                        <a href="#" className="block text-sm px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">What To Read In the Hindu</a>
-                                        <a href="#" className="block text-sm px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">What To Read In The Indian Express</a>
-                                        <a href="#" className="block text-sm px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">Editorial Analysis</a>
-                                        <a href="#" className="block text-sm px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">Daily Current Affairs Analysis</a>
-                                        <a href="#" className="block text-sm px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">Important Facts of the Day</a>
+                                        <Link href="/current-affairs/what-we-ready-in-hindu" className="block text-sm px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">What To Read In the Hindu</Link>
+                                        <Link href="#" className="block text-sm px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">What To Read In The Indian Express</Link>
+                                        <Link href="#" className="block text-sm px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">Editorial Analysis</Link>
+                                        <Link href="#" className="block text-sm px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">Daily Current Affairs Analysis</Link>
+                                        <Link href="#" className="block text-sm px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">Important Facts of the Day</Link>
 
 
                                         {/* Shop Submenu */}
@@ -299,7 +299,7 @@ const Header: React.FC = () => {
 
                             {/* Events */}
                             <div className="border-b border-gray-200">
-                                <a href="#" className="block py-2 text-gray-900 hover:text-red-500 font-medium">Scholarship Programme</a>
+                                <a href="/scholarship-programme" className="block py-2 text-gray-900 hover:text-red-500 font-medium">Scholarship Programme</a>
                             </div>
                             <div className="border-b border-gray-200">
                                 <a href="#" className="block py-2 text-gray-900 hover:text-red-500 font-medium">Blog</a>

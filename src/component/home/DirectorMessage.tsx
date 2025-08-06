@@ -25,7 +25,7 @@ const DirectorMessage: React.FC = () => {
         },
         {
             id: 2,
-            name: "Ashutosh Pandey",
+            name: "Ashutosh Dixit",
             title: "Teacher",
             company: "Dikshant IAS",
             description: "Ashutosh Pandey, a renowned educator at Dikshant IAS, is known for his in-depth knowledge and student-centric approach to UPSC preparation. With a strong command over current affairs and polity, he simplifies complex topics, making learning effective and engaging. His guidance at Dikshant IAS has helped numerous aspirants achieve their civil services dreams with confidence and clarity.",

@@ -303,7 +303,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({ program }) => {
       </div>
 
       {/* Rating */}
-      <div className="absolute top-16 md:top-20 left-3 md:left-4 flex items-center gap-2 mb-3 z-10">
+      <div className="absolute top-32 md:top-39 left-3 md:left-4 flex items-center gap-2 mb-3 z-10">
         <div className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-lg text-xs md:text-sm font-medium flex items-center gap-1">
           ⭐ {program.rating}
         </div>
