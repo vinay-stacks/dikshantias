@@ -408,16 +408,16 @@ const CoursePage = () => {
                             </div>
                             <div className="mt-6 bg-gradient-to-br from-gray-900 to-red-900 rounded-lg overflow-hidden text-white">
                                 <div className="p-6">
-                                    <h3 className="text-lg font-semibold mb-2">Newest template</h3>
+                                    <h3 className="text-lg font-semibold mb-2">Newest offer</h3>
                                     <p className="text-sm text-gray-300 mb-4">
                                         Create a landing page for this course to maximize Conversions.
                                     </p>
                                     <div className="relative mb-4">
                                         <Image
-                                            width={1920}
+                                            width={500}
                                             height={500}
                                             src="/api/placeholder/280/160"
-                                            alt="Template preview"
+                                            alt="Thumbnails preview"
                                             className="w-full rounded-lg"
                                         />
                                     </div>

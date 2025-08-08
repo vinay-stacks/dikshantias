@@ -8,7 +8,7 @@ function SuccessStart() {
             <section className="bg-[#ecf4fc] py-6 px-2 md:py-16 mt-4">
                 <div className="container max-w-7xl mx-auto rounded-lg smx-auto items-center grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className='mb-0'>
-                        <h2 className="text-2xl md:text-3xl font-bold md:mb-5 text-gray-900">Success Starts with <span className="text-[#f43144]">  One Step</span></h2>
+                        <h2 className="text-xl md:text-3xl font-bold md:mb-5 text-gray-900">Success Starts with <span className="text-[#f43144]">  One Step</span></h2>
                         <p className="text-sm md:text-xl text-gray-900 md:mb-4">
                             Start learning with our curated programs driven by knowledge, ambition, and result.
                         </p>

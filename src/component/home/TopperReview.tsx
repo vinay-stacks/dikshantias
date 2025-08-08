@@ -64,7 +64,15 @@ export default function TopperReview() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const maxIndex = Math.max(0, videos.length - itemsPerView);
+const maxIndex = Math.max(0, videos.length - itemsPerView);
+  // Handle autoplay
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentIndex((prev) => (prev + 1 > maxIndex ? 0 : prev + 1));
+  }, 3000); // Change slide every 5 seconds
+
+  return () => clearInterval(interval);
+}, [maxIndex]);
 
   useEffect(() => {
     if (currentIndex > maxIndex) {
@@ -87,30 +95,13 @@ export default function TopperReview() {
   return (
     <div className="py-10 px-4 bg-[#ecf4fc] mb-10">
       <div className="max-w-7xl mx-auto rounded-3xl">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-12 text-center">
+        <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-12 text-center">
           Toppers Views About <span className="text-[#f43144]"> Dikshant IAS</span>
         </h2>
 
         <div className="relative">
           {/* Navigation Buttons */}
-          {/* {videos.length > itemsPerView && (
-            <>
-              <button
-                onClick={prevSlide}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-red-600 hover:bg-red-600/50 rounded-full p-2"
-              >
-                <ChevronLeft className="w-6 h-6 text-white" />
-              </button>
-
-              <button
-                onClick={nextSlide}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-red-600 hover:bg-red-600/50 rounded-full p-2"
-              >
-                <ChevronRight className="w-6 h-6 text-white" />
-              </button>
-            </>
-          )} */}
-
+     
           {/* Slider */}
           <div className="overflow-hidden">
             <div

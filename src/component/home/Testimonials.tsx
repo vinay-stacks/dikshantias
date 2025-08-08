@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import Image from 'next/image';
 
 const Testimonials = () => {
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -107,7 +108,7 @@ const Testimonials = () => {
 
                 {/* Section Header */}
                 <div className="mb-12 md:mb-16">
-                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">
+                    <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-1">
                         Success Stories That <span className="text-[#f43144] mt-1 md:mt-2">Inspire Excellence</span>
                     </h2>
                     <p className="text-lg md:text-xl text-gray-800 leading-relaxed">
@@ -136,7 +137,9 @@ const Testimonials = () => {
                                             {/* Profile Image and Basic Info */}
                                             <div className="md:col-span-2 text-center">
                                                 <div className="relative inline-block mb-4 md:mb-6">
-                                                    <img
+                                                    <Image
+                                                    width={400}
+                                                    height={400}
                                                         src={testimonial.image}
                                                         alt={testimonial.name}
                                                         className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full mx-auto shadow-lg border-4 border-rose-100"
@@ -144,7 +147,7 @@ const Testimonials = () => {
                                                 </div>
 
                                                 <div className="space-y-2 md:space-y-3">
-                                                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-50">
+                                                    <h3 className="text-[18px] md:text-3xl font-bold text-gray-50">
                                                         {testimonial.name}
                                                     </h3>
                                                     <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3">

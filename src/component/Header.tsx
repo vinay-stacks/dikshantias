@@ -37,8 +37,10 @@ const Header: React.FC = () => {
             {/* Top Banner */}
             <div className="bg-[#f43144] text-white text-center py-1 px-4 items-center">
                 <div className='max-w-7xl mx-auto flex justify-between  items-center'>
-                    <div className="text-sm md:text-lg font-medium">
-                        Special welcome gift. Get 30% off your first Registration with code DIKSHANT. Find out more!
+                    <div className="grid grid-cols-1 text-sm md:text-lg font-medium">
+                        <div className=' overflow-hidden'>
+                            <p className='animate-marquee text-nowrap'>Special welcome gift. Get 30% off your first Registration with code DIKSHANT. Find out more!</p>
+                        </div>
                     </div>
                     {/* Live Demo Button with Blink Animation */}
 
@@ -65,7 +67,7 @@ const Header: React.FC = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-0">
                     <div className="flex items-center justify-between h-14 md:h-16">
                         {/* Logo */}
-                        <div className="logo w-[150px] md:w-[160px]">
+                        <div className="logo w-[130px] md:w-[160px]">
                              <Link href='/' className='logo'>
                                     <Image src={'/img/dikshant-logo.png'} alt="Logo" width={160} height={100} />
                             </Link>                   
@@ -117,20 +119,6 @@ const Header: React.FC = () => {
                                         <a href="#" className="block px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">Editorial Analysis</a>
                                         <a href="#" className="block px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">Daily Current Affairs Analysis</a>
                                         <a href="#" className="block px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">Important Facts of the Day</a>
-
-                                        {/* Shop Submenu */}
-                                        {/* <div className="relative group/submenu">
-                                            <a href="#" className="flex items-center justify-between px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">
-                                                <span>Shop</span>
-                                                <ChevronRight className="w-4 h-4" />
-                                            </a>
-                                          
-                                            <div className="absolute left-full top-0 w-48 bg-white shadow-lg rounded-md py-2 opacity-0 invisible group-hover/submenu:opacity-100 group-hover/submenu:visible transition-all duration-200 z-50">
-                                                <a href="#" className="block px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">Shop Grid</a>
-                                                <a href="#" className="block px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">Shop List</a>
-                                                <a href="#" className="block px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">Product Details</a>
-                                            </div>
-                                        </div> */}
 
                                         <a href="#" className="block px-4 py-2 text-gray-900 hover:text-red-500 hover:bg-gray-50">FAQ</a>
                                     </div>
@@ -223,7 +211,7 @@ const Header: React.FC = () => {
                         <div className="flex justify-between items-center mb-8">
                             <div className="flex items-center space-x-2">
                                 <Link href='/' className='logo'>
-                                    <Image src={'/img/dikshant-logo.png'} alt="Logo" width={200} height={100} />
+                                    <Image src={'/img/dikshant-logo.png'} alt="Logo" width={140} height={100} />
                                 </Link>
                             </div>
                             <button onClick={toggleMobileMenu} className="p-2 text-gray-600 hover:text-gray-700">

@@ -1,7 +1,13 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Monitor, Building2, BookOpen, FileText } from 'lucide-react';
-import Image from 'next/image';
+import {
+  ChevronLeft,
+  ChevronRight,
+  Monitor,
+  Building2,
+  BookOpen,
+  FileText
+} from 'lucide-react';
 
 interface Course {
   id: number;
@@ -54,15 +60,6 @@ const BestIasCoaching: React.FC = () => {
       icon: <FileText className="w-8 h-8 text-rose-700" />,
       image: '/api/placeholder/200/150'
     }
-    //  {
-    //   id: 5,
-    //   title: 'Scholarship',
-    //   subtitle: 'Show more',
-    //   bgColor: 'bg-blue-200',
-    //   circleColor: 'bg-blue-300',
-    //   icon: <FileText className="w-8 h-8 text-blue-700" />,
-    //   image: '/api/placeholder/200/150'
-    // }
   ];
 
   // Calculate slides to show based on screen size
@@ -70,11 +67,11 @@ const BestIasCoaching: React.FC = () => {
     const updateSlidesToShow = (): void => {
       const width = window.innerWidth;
       if (width >= 1024) {
-        setSlidesToShow(4); // Desktop: show 4 cards
+        setSlidesToShow(4);
       } else if (width >= 768) {
-        setSlidesToShow(2); // Tablet: show 2 cards
+        setSlidesToShow(2);
       } else {
-        setSlidesToShow(1); // Mobile: show 1 card
+        setSlidesToShow(1);
       }
     };
 
@@ -83,7 +80,7 @@ const BestIasCoaching: React.FC = () => {
     return () => window.removeEventListener('resize', updateSlidesToShow);
   }, []);
 
-  // Reset current slide when slidesToShow changes to prevent going out of bounds
+  // Reset current slide when slidesToShow changes
   useEffect(() => {
     const maxSlides = Math.max(0, courses.length - slidesToShow);
     if (currentSlide > maxSlides) {
@@ -94,48 +91,47 @@ const BestIasCoaching: React.FC = () => {
   const maxSlides = Math.max(0, courses.length - slidesToShow);
 
   const nextSlide = (): void => {
-    setCurrentSlide((prev: number) => {
-      const next = prev + 1;
-      return next > maxSlides ? 0 : next; // Loop back to start
-    });
+    setCurrentSlide((prev) => (prev + 1 > maxSlides ? 0 : prev + 1));
   };
 
   const prevSlide = (): void => {
-    setCurrentSlide((prev: number) => {
-      const next = prev - 1;
-      return next < 0 ? maxSlides : next; // Loop to end
-    });
+    setCurrentSlide((prev) => (prev - 1 < 0 ? maxSlides : prev - 1));
   };
 
   const goToSlide = (index: number): void => {
     setCurrentSlide(Math.min(index, maxSlides));
   };
 
+  // AUTOPLAY - every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 4000); // 4 seconds
+    return () => clearInterval(interval); // Cleanup
+  }, [currentSlide, maxSlides]);
+
   return (
     <div className="bg-white py-8 md:py-16 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="mb-12">
-          <h1 className="text-2xl md:text-3xl lg:text-3xl font-bold text-gray-900 text-left">
-            Best <span className="text-[#f43144]"> IAS Coaching  </span>Institute in India
+          <h1 className="text-xl md:text-3xl lg:text-3xl font-bold text-gray-900 text-left">
+            Best <span className="text-[#f43144]"> IAS Coaching </span>Institute in India
           </h1>
         </div>
 
-        {/* Slider Container */}
         <div className="relative">
           <div className="overflow-hidden rounded-lg">
-            <div 
+            <div
               className="flex transition-transform duration-500 ease-out"
-              style={{ 
-                transform: `translateX(-${(currentSlide * 100) / slidesToShow}%)`,
-                // width: `${courses.length * (100 / slidesToShow)}%`
+              style={{
+                transform: `translateX(-${(currentSlide * 100) / slidesToShow}%)`
               }}
             >
               {courses.map((course: Course) => (
-                <div 
-                  key={course.id} 
+                <div
+                  key={course.id}
                   className="flex-shrink-0 px-3"
-                  style={{ 
+                  style={{
                     width: `${100 / slidesToShow}%`
                   }}
                 >
@@ -145,7 +141,7 @@ const BestIasCoaching: React.FC = () => {
             </div>
           </div>
 
-          {/* Navigation Buttons */}
+          {/* Arrows */}
           {courses.length > slidesToShow && (
             <>
               <button
@@ -165,10 +161,10 @@ const BestIasCoaching: React.FC = () => {
             </>
           )}
 
-          {/* Dots Indicator */}
+          {/* Dots */}
           {courses.length > slidesToShow && (
             <div className="flex justify-center mt-6 md:mt-8 gap-2">
-              {Array.from({ length: maxSlides + 1 }, (_, index: number) => (
+              {Array.from({ length: maxSlides + 1 }, (_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
@@ -192,38 +188,23 @@ interface CourseCardProps {
 
 const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
   return (
-    <div className={`${course.bgColor} rounded-3xl p-6 md:p-8 h-80 md:h-96 relative overflow-hidden group hover:shadow-lg transition-shadow duration-300`}>
-      {/* Header with Icon */}
+    <div
+      className={`${course.bgColor} rounded-3xl p-6 md:p-8 h-80 md:h-96 relative overflow-hidden group hover:shadow-lg transition-shadow duration-300`}
+    >
       <div className="flex items-center gap-3 mb-4">
-        <div className="p-2 bg-white rounded-lg shadow-sm">
-          {course.icon}
-        </div>
+        <div className="p-2 bg-white rounded-lg shadow-sm">{course.icon}</div>
       </div>
 
-      {/* Title */}
-      <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
-        {course.title}
-      </h3>
+      <h3 className="text-[18px] md:text-2xl font-bold text-gray-900 mb-2">{course.title}</h3>
 
-      {/* Subtitle */}
-      <p className="text-sm md:text-base text-gray-600 font-medium mb-8">
-        {course.subtitle}
-      </p>
+      <p className="text-sm md:text-base text-gray-600 font-medium mb-8">{course.subtitle}</p>
 
-      {/* Circular Image Container */}
       <div className="absolute bottom-6 right-6">
-        <div className={`${course.circleColor} rounded-full p-4 w-32 h-32 md:w-40 md:h-40 flex items-center justify-center overflow-hidden shadow-lg`}>
-          {/* Document/Papers Image */}
+        <div
+          className={`${course.circleColor} rounded-full p-4 w-32 h-32 md:w-40 md:h-40 flex items-center justify-center overflow-hidden shadow-lg`}
+        >
           <div className="relative w-20 h-16 md:w-24 md:h-20">
-            <div className="absolute inset-0 bg-white rounded-lg shadow-md transform rotate-12">
-              <div className="p-2 space-y-1">
-                {/* <div className="h-1 bg-gray-300 rounded w-3/4"></div>
-                <div className="h-1 bg-gray-300 rounded w-1/2"></div>
-                <div className="h-1 bg-gray-300 rounded w-2/3"></div>
-                <div className="h-1 bg-gray-300 rounded w-3/4"></div>
-                <div className="h-1 bg-gray-300 rounded w-1/2"></div> */}
-              </div>
-            </div>
+            <div className="absolute inset-0 bg-white rounded-lg shadow-md transform rotate-12"></div>
             <div className="absolute inset-0 bg-white rounded-lg shadow-md transform -rotate-6 -translate-x-2">
               <div className="p-2 space-y-1">
                 <div className="h-1 bg-gray-400 rounded w-2/3"></div>
@@ -246,9 +227,6 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
           </div>
         </div>
       </div>
-
-      {/* Hover Effect */}
-      {/* <div className="absolute inset-0 bg-black bg-opacity-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div> */}
     </div>
   );
 };

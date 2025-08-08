@@ -19,11 +19,11 @@ const DirectorMessage: React.FC = () => {
         {
             id: 1,
             name: "Dr. S.S. Pandey",
-            title: "Educator & Founder, Dikshant IAS",
+            title: "Educator & Director, Dikshant IAS",
             company: "Dikshant IAS",
             description: "Dr. SS Pandey is a contemporary sociologist from India who has been sensitive to contemporary social issues along with having a deep understanding of human society. Dr. SS Pandey has done PhD in Industrial Sociology from the Sociology Department of Banaras Hindu University and in the UNESCOchair project Vidya India, eminent anthropologist Dr. R. N. Worked as Research Assistant with Sasaram.",
             hasImage: true,
-            image: "/img/ss-pandey.webp",
+            image: "/img/ss-pandey.jpg",
             url:"https://drsspandey.com/"
         },
         {
@@ -33,7 +33,7 @@ const DirectorMessage: React.FC = () => {
             company: "Dikshant IAS",
             description: "From the boardrooms of global corporations to the classrooms of aspiring civil servants, Ashutosh Dixit has carved a unique path—where corporate excellence meets educational transformation. A visionary leader with a heart for public good, Ashutosh Dixit today stands as a mentor, strategist, and nation-builder, steering one of India’s most socially committed institutions—Dikshant Education Centre Private Limited.",
             hasImage: true,
-            image: "/img/ashutosh-pandey.webp",
+            image: "/img/ashutosh-dixit.jpg",
             url:"/ashutosh-dixit"
         }
     ];
@@ -67,7 +67,7 @@ const DirectorMessage: React.FC = () => {
                                         <div className="h-full flex flex-col">
                                             {/* Header */}
                                             <div className="mb-4">
-                                                <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors duration-300">
+                                                <h2 className="text-[18px] md:text-xl font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors duration-300">
                                                     {founder.name}
                                                 </h2>
                                                 <p className="text-green-600 font-medium text-sm mb-1 group-hover:text-red-600 transition-colors duration-300">

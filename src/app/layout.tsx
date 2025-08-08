@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/component/Header";
 import Footer from "@/component/Footer";
+import WhatsAppMessage from "@/component/calltoaction/WhatsAppMessage";
+import CallButton from "@/component/calltoaction/CallButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +35,8 @@ export default function RootLayout({children,}: Readonly<{
         <Header />
         {children}
         <Footer />
+        <WhatsAppMessage />
+        <CallButton />
 
       </body>
       </html>

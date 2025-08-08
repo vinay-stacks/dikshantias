@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Calendar, Clock, ArrowRight, Bell, BookOpen, FileText, TrendingUp } from 'lucide-react';
+import Image from 'next/image';
 
 interface NewsItem {
   id: number;
@@ -106,7 +107,7 @@ const NewsUpdatesSection = () => {
         
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
+          <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">
             Latest News & Updates
           </h2>
           <p className="text-lg md:text-xl text-gray-800 max-w-3xl mx-auto leading-relaxed">
@@ -127,7 +128,9 @@ const NewsUpdatesSection = () => {
                   
                   {/* News Image */}
                   <div className="sm:w-48 md:w-56 h-48 sm:h-auto flex-shrink-0 overflow-hidden">
-                    <img
+                    <Image
+                    width={600}
+                    height={400}
                       src={item.image}
                       alt={item.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -153,7 +156,7 @@ const NewsUpdatesSection = () => {
                     </div>
 
                     {/* News Title */}
-                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#f43144] transition-colors duration-300">
+                    <h3 className="text-[18px] md:text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#f43144] transition-colors duration-300">
                       {item.title}
                     </h3>
 

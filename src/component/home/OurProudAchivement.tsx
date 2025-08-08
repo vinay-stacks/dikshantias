@@ -28,7 +28,7 @@ const toppers: Topper[] = [
     service: "CSE Result",
     year: "2021",
     rank: 4,
-   image: "/img/result/aishwarya-result.jpg",
+    image: "/img/result/aishwarya-result.jpg",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const toppers: Topper[] = [
     service: "CSE Result",
     year: "2021",
     rank: 6,
-   image: "/img/result/gamini-result.jpg",
+    image: "/img/result/gamini-result.jpg",
   },
   {
     id: 4,
@@ -60,7 +60,7 @@ const toppers: Topper[] = [
     service: "IFS",
     year: "2023",
     rank: 34,
-     image: "/img/result/gamini-result.jpg",
+    image: "/img/result/gamini-result.jpg",
   },
 ]
 
@@ -86,7 +86,7 @@ export default function OurProudAchivement() {
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
-  // Reset current index when items per view changes to prevent going out of bounds
+  // Reset current index when items per view changes
   useEffect(() => {
     const maxIndex = Math.max(0, toppers.length - itemsPerView)
     if (currentIndex > maxIndex) {
@@ -97,36 +97,35 @@ export default function OurProudAchivement() {
   const maxIndex = Math.max(0, toppers.length - itemsPerView)
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => {
-      const next = prev + 1
-      return next > maxIndex ? 0 : next // Loop back to start
-    })
+    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1))
   }
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => {
-      const next = prev - 1
-      return next < 0 ? maxIndex : next // Loop to end
-    })
+    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1))
   }
 
   const goToSlide = (index: number) => {
     setCurrentIndex(Math.min(index, maxIndex))
   }
 
+  // Autoplay effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide()
+    }, 3000) // change interval time (ms) if needed
+
+    return () => clearInterval(interval)
+  }, [currentIndex, itemsPerView]) // Depends on these to keep logic updated
+
   return (
     <div className="py-5 px-2 md:px-4 mb-20" style={{ backgroundColor: "#fff" }}>
       <div className="max-w-7xl md:mx-auto">
-
-        {/* Toppers Section */}
         <div className="bg-slate-900 backdrop-blur-sm rounded-3xl p-6 md:p-8 lg:p-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-12">
-            Recent UPSC Toppers 2023
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-12">
+            Our UPSC Toppers
           </h2>
 
-          {/* Slider Container */}
           <div className="relative">
-            {/* Navigation Buttons */}
             {toppers.length > itemsPerView && (
               <>
                 <button
@@ -147,23 +146,20 @@ export default function OurProudAchivement() {
               </>
             )}
 
-            {/* Slider */}
             <div className="overflow-hidden">
               <div
                 className="flex transition-transform duration-300 ease-in-out"
                 style={{
                   transform: `translateX(-${(currentIndex * 100) / itemsPerView}%)`,
-                  
                 }}
               >
                 {toppers.map((topper) => (
-                  <div 
-                    key={topper.id} 
-                    className="flex-shrink-0 px-3" 
+                  <div
+                    key={topper.id}
+                    className="flex-shrink-0 px-3"
                     style={{ width: `${100 / itemsPerView}%` }}
                   >
                     <div className="text-center bg-white/6 border border-gray-100/20 py-8 rounded-2xl">
-                      {/* Profile Image with Rank Badge */}
                       <div className="relative inline-block mb-4">
                         <div className="w-25 h-25 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full overflow-hidden border-2 md:border-3 border-orange-400">
                           <Image
@@ -174,13 +170,10 @@ export default function OurProudAchivement() {
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        {/* AIR Badge */}
                         <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                           AIR {topper.rank}
                         </div>
                       </div>
-
-                      {/* Topper Info */}
                       <h3 className="text-lg md:text-xl font-bold text-white mb-1">{topper.name}</h3>
                       <p className="text-white/80 font-medium mb-1">{topper.service}</p>
                       <p className="text-orange-300 text-sm">{topper.year}</p>
@@ -189,11 +182,6 @@ export default function OurProudAchivement() {
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* View All Results Button */}
-          <div className="text-center mt-12">
-           
           </div>
 
           {/* Dots Indicator */}
