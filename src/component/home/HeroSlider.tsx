@@ -4,9 +4,10 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Image from 'next/image';
+import { Speech } from 'lucide-react';
 
 export default function HeroSlider() {
-     const courses = [
+    const courses = [
         { name: "E-Learning", color: "bg-purple-200", icon: "⏰" },
         { name: "What to Read in The Hindu", color: "bg-yellow-200", icon: "🎥" },
         { name: "What to  Read in The Indian Express", color: "bg-green-200", icon: "🏫" },
@@ -14,7 +15,7 @@ export default function HeroSlider() {
         { name: "Editorial Analysis", color: "bg-red-200", icon: "📚" },
         { name: "Important Facts of the Day ", color: "bg-blue-200", icon: "👥" },
     ];
-    
+
     const slides = [
         { id: 1, title: 'Slide 1', image: '/img/hero-slider.webp' },
         { id: 2, title: 'Slide 2', image: '/img/hero-slider-2.webp' },
@@ -51,6 +52,22 @@ export default function HeroSlider() {
                     ))}
                 </Swiper>
             </div>
+            {/* announcement */}
+            <div className="bg-rose-100 max-w-7xl mx-1 md:mx-auto py-2 px-3 overflow-hidden rounded-full md:rounded-lg my-2 md:hidden">
+                <div className="flex items-center">
+                    <div className="flex items-center space-x-2 md:px-4 flex-shrink-0 md:bg-red-500 rounded-full mr-4">
+                        <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                            <Speech className="text-white w-4 h-5" />
+                        </div>
+                        <span className="font-bold text-sm mt-0.5 text-white hidden md:block">ANNOUNCEMENT</span>
+                    </div>
+                    <div className="max-w-5xl flex-1 overflow-hidden text-end">
+                        <div className="animate-marquee whitespace-nowrap text-gray-900 text-md">
+                            <p className='text-sm md:text-lg font-bold'> 🚧 We&apos;re Currently Improving Your Experience! Our site is undergoing maintenance to bring you a better and smoother experience. We appreciate your patience and understanding. Please check back soon! 🚧</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             {/* Popular Courses Card Slider with Autoplay */}
             <div className="container max-w-7xl mx-auto my-4 md:py-8">
@@ -81,6 +98,21 @@ export default function HeroSlider() {
                     ))}
                 </Swiper>
             </div>
+
+
+                     <style jsx>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+        .animate-marquee {
+          animation: marquee 20s linear infinite;
+        }
+      `}</style>
         </div>
     );
 }

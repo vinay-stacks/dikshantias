@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 
 function BookFreeDemo() {
+    
     return (
         <>
             <section className="bg-[#ecf4fc] py-6 px-2 md:py-12 mt-10">

@@ -292,6 +292,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({ program }) => {
         </div>
 
         {/* Buttons */}
+
         <div className="mt-auto space-y-2">
           <button className="w-full bg-[#f43144] hover:bg-[#d12a3a] text-white py-2 rounded-lg text-sm font-semibold flex items-center justify-center gap-1">
             Enroll Now <ChevronRight className="w-4 h-4" />
