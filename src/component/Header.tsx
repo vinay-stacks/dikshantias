@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { ChevronDown, Menu, X, Phone, Play, ChevronRight, Speech } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import SlidingButtons from './SlidingButtons';
 
 // type HeaderProps = Record<string, never>;
 
@@ -15,10 +16,6 @@ const Header: React.FC = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
         setOpenMobileDropdown(null);
     };
-
-    // const handleDropdownToggle = (menu: string) => {
-    //     setOpenDropdown(openDropdown === menu ? null : menu);
-    // };
 
     const handleMobileDropdownToggle = (menu: string) => {
         setOpenMobileDropdown(openMobileDropdown === menu ? null : menu);
@@ -34,33 +31,6 @@ const Header: React.FC = () => {
 
     return (
         <div className="w-full">
-            {/* Top Banner */}
-            <div className="bg-[#f43144] text-white text-center py-1 px-4 items-center">
-                <div className='max-w-7xl mx-auto flex justify-between  items-center'>
-                    <div className="grid grid-cols-1 text-sm md:text-lg font-medium">
-                        <div className=' overflow-hidden'>
-                            <p className='animate-marquee text-nowrap'>Special welcome gift. Get 30% off your first Registration with code DIKSHANT. Find out more!</p>
-                        </div>
-                    </div>
-                    {/* Live Demo Button with Blink Animation */}
-
-                    <div className='flex gap-4'>
-                        <button className="relative hidden sm:flex items-center space-x-2 bg-white text-red-600 px-4 py-2 rounded">
-                            <span className="absolute inline-flex h-5 w-5 animate-ping rounded-full bg-red-400 opacity-75 left-3"></span>
-                            <Play className="w-4 h-4" />
-                            <span className="font-medium  hover:text-red-600 animate-pulse">Live Demo</span>
-                        </button>
-                        <button className="relative hidden sm:flex items-center space-x-2 bg-white text-red-600 px-4 py-2 rounded">
-                            <span className="font-medium  hover:text-red-600 animate-pulse">HIN</span>
-                        </button>
-                        <button className="relative hidden sm:flex items-center space-x-2 bg-white text-red-600 px-4 py-2 rounded">
-                            <span className="font-medium  hover:text-red-600 animate-pulse">EN</span>
-                        </button>
-                    </div>
-
-                </div>
-
-            </div>
 
             {/* Main Header */}
             <div className="bg-white shadow-sm md:py-2">
@@ -158,12 +128,12 @@ const Header: React.FC = () => {
                             </button> */}
 
                             {/* Get Started Button */}
-                            <button className="hidden sm:block bg-[#f43144] text-white px-6 py-2 rounded hover:bg-[#f43131] font-medium">
+                            <button className="hidden sm:block bg-[#b10208] text-white px-6 py-2 rounded hover:bg-[#f43131] font-medium">
                                 Get Started
                             </button>
 
                             {/* Login */}
-                            <button className="hidden sm:flex items-center space-x-1 text-gray-700 hover:text-[#f43144]">
+                            <button className="hidden sm:flex items-center space-x-1 text-gray-700 hover:text-[#950409]">
                                 <span>Log In</span>
                             </button>
 
@@ -180,7 +150,7 @@ const Header: React.FC = () => {
             </div>
 
             {/* Announcement Banner with Marquee */}
-            <div className="bg-rose-100 max-w-7xl mx-1 md:mx-auto py-2 px-3 overflow-hidden rounded-full md:rounded-lg my-2">
+            {/* <div className="bg-rose-100 max-w-7xl mx-1 md:mx-auto py-2 px-3 overflow-hidden rounded-full md:rounded-lg my-2">
                 <div className="flex items-center">
                     <div className="flex items-center space-x-2 md:px-4 flex-shrink-0 md:bg-red-500 rounded-full mr-4">
                         <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
@@ -194,7 +164,10 @@ const Header: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
+
+            <SlidingButtons />
+
 
             {/* Mobile Sidebar Menu */}
             <div className={`fixed inset-0 z-50 lg:hidden transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
@@ -223,7 +196,10 @@ const Header: React.FC = () => {
                         <nav className="">
                             {/* Home */}
                             <div className="border-b border-gray-200">
-                                <a href="/about-us" className="block py-1 text-gray-900 hover:text-red-500 font-medium">About us</a>
+                                <a href="/about-us" className="block py-1 text-gray-900 hover:text-red-500 font-medium">About Dikshant IAS</a>
+                            </div>
+                            <div className="border-b border-gray-200">
+                                <a href="/about-upsc" className="block py-1 text-gray-900 hover:text-red-500 font-medium">About UPSC</a>
                             </div>
 
                             {/* Courses Dropdown */}
@@ -324,7 +300,7 @@ const Header: React.FC = () => {
                 </div>
             </div>
 
-            <style jsx>{`
+            {/* <style jsx>{`
         @keyframes marquee {
           0% {
             transform: translateX(100%);
@@ -336,7 +312,7 @@ const Header: React.FC = () => {
         .animate-marquee {
           animation: marquee 20s linear infinite;
         }
-      `}</style>
+      `}</style> */}
         </div>
     );
 };

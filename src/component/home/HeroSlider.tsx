@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import Image from 'next/image';
 import { Speech } from 'lucide-react';
+import NewAnnouncement from './NewAnnouncement';
 
 export default function HeroSlider() {
     const courses = [
@@ -24,7 +25,7 @@ export default function HeroSlider() {
     ];
 
     return (
-        <div className="bg-white mt-4 mx-2">
+        <div className="bg-white -mt-14 md:mt-3 mx-2">
             {/* Top Slider */}
             <div className="max-w-7xl md:mx-auto mx-1">
                 <Swiper
@@ -53,33 +54,20 @@ export default function HeroSlider() {
                 </Swiper>
             </div>
             {/* announcement */}
-            <div className="bg-rose-100 max-w-7xl mx-1 md:mx-auto py-2 px-3 overflow-hidden rounded-full md:rounded-lg my-2 md:hidden">
-                <div className="flex items-center">
-                    <div className="flex items-center space-x-2 md:px-4 flex-shrink-0 md:bg-red-500 rounded-full mr-4">
-                        <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
-                            <Speech className="text-white w-4 h-5" />
-                        </div>
-                        <span className="font-bold text-sm mt-0.5 text-white hidden md:block">ANNOUNCEMENT</span>
-                    </div>
-                    <div className="max-w-5xl flex-1 overflow-hidden text-end">
-                        <div className="animate-marquee whitespace-nowrap text-gray-900 text-md">
-                            <p className='text-sm md:text-lg font-bold'> 🚧 We&apos;re Currently Improving Your Experience! Our site is undergoing maintenance to bring you a better and smoother experience. We appreciate your patience and understanding. Please check back soon! 🚧</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+            <NewAnnouncement />
 
             {/* Popular Courses Card Slider with Autoplay */}
-            <div className="container max-w-7xl mx-auto my-4 md:py-8">
-                <h2 className="text-xl md:text-3xl font-bold mb-4 text-gray-900 pl-2 md:pl-0">
-                    Popular <span className="text-[#f43144]">Courses</span>
+            <div className="container max-w-7xl mx-auto md:mt-0 mt-4 md:py-8">
+                <h2 className="text-xl md:text-3xl font-bold mb-4 text-[#00072c] pl-2 md:pl-0">
+                    Latest News and <span className="text-[#f43144]">Updates</span>
                 </h2>
                 <Swiper
                     modules={[Autoplay]}
                     spaceBetween={8}
                     slidesPerView={2}
                     autoplay={{
-                        delay: 2000,
+                        delay: 4000,
                         disableOnInteraction: false,
                     }}
                     breakpoints={{
@@ -92,7 +80,7 @@ export default function HeroSlider() {
                         <SwiperSlide key={index}>
                             <div className={`md:w-48 w-44 md:h-32 h-26 ${course.color} rounded-lg flex flex-col text-center p-4`}>
                                 <span className="text-3xl mb-2">{course.icon}</span>
-                                <span className="text-[13px] md:text-[15px] font-bold text-gray-900">{course.name}</span>
+                                <span className="text-[13px] md:text-[15px] font-bold text-[#000622]">{course.name}</span>
                             </div>
                         </SwiperSlide>
                     ))}

@@ -15,7 +15,7 @@ const Testimonials = () => {
             rank: "AIR 23",
             year: "2024",
             image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-            quote: "Dikshant IAS provided me with the perfect blend of traditional coaching and modern teaching methods. The faculty's guidance was instrumental in my success.",
+            quote: "Dikshant IAS provided me with the perfect blend of traditional coaching and modern teaching methods. The faculty's guidance was instrumental in my success. The faculty's guidance was instrumental in my success.",
             background: "B.Tech from IIT Delhi",
             attempts: "2nd Attempt",
             optional: "Sociology"
@@ -26,7 +26,7 @@ const Testimonials = () => {
             rank: "AIR 45",
             year: "2024",
             image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-            quote: "The answer writing sessions and personal mentorship made all the difference. The systematic approach helped me crack UPSC in my first attempt.",
+            quote: "The answer writing sessions and personal mentorship made all the difference. The systematic approach helped me crack UPSC in my first attempt. The faculty's guidance was instrumental in my success. The faculty's guidance was instrumental in my success.",
             background: "M.A. Political Science",
             attempts: "1st Attempt",
             optional: "Political Science"
@@ -37,7 +37,7 @@ const Testimonials = () => {
             rank: "AIR 67",
             year: "2024",
             image: "https://images.pexels.com/photos/2169434/pexels-photo-2169434.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-            quote: "As a working professional, the flexible timings and comprehensive study material were perfect. The current affairs modules kept me updated.",
+            quote: "As a working professional, the flexible timings and comprehensive study material were perfect. The current affairs modules kept me updated. The faculty's guidance was instrumental in my success. The faculty's guidance was instrumental in my success.",
             background: "CA, Working Professional",
             attempts: "3rd Attempt",
             optional: "Commerce & Accountancy"
@@ -48,7 +48,7 @@ const Testimonials = () => {
             rank: "AIR 89",
             year: "2024",
             image: "https://images.pexels.com/photos/2726111/pexels-photo-2726111.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-            quote: "The test series with detailed analysis helped me track my progress. The faculty's experience and dedication are truly commendable.",
+            quote: "The test series with detailed analysis helped me track my progress. The faculty's experience and dedication are truly commendable. The faculty's guidance was instrumental in my success. The faculty's guidance was instrumental in my success.",
             background: "B.A. History (Hons)",
             attempts: "2nd Attempt",
             optional: "History"
@@ -59,7 +59,7 @@ const Testimonials = () => {
             rank: "AIR 156",
             year: "2024",
             image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-            quote: "The structured approach and optional subject coaching were excellent. The peer learning environment was very motivating and supportive.",
+            quote: "The structured approach and optional subject coaching were excellent. The peer learning environment was very motivating and supportive. The faculty's guidance was instrumental in my success. The faculty's guidance was instrumental in my success.",
             background: "M.Sc. Geography",
             attempts: "1st Attempt",
             optional: "Geography"
@@ -70,7 +70,7 @@ const Testimonials = () => {
             rank: "AIR 234",
             year: "2023",
             image: "https://images.pexels.com/photos/3777931/pexels-photo-3777931.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-            quote: "The interview preparation gave me confidence to face the UPSC panel. Mock interviews with experienced panelists were crucial for my success.",
+            quote: "The interview preparation gave me confidence to face the UPSC panel. Mock interviews with experienced panelists were crucial for my success. The faculty's guidance was instrumental in my success. The faculty's guidance was instrumental in my success.",
             background: "B.E. Mechanical",
             attempts: "3rd Attempt",
             optional: "Mechanical Engineering"
@@ -103,22 +103,22 @@ const Testimonials = () => {
     };
 
     return (
-        <section className="py-5 md:py-5">
-            <div className="mx-auto px-3 lg:px-8 max-w-7xl">
+        <section className="py-0 md:py-5">
+            <div className="mx-auto max-w-7xl">
 
                 {/* Section Header */}
-                <div className="mb-12 md:mb-16">
-                    <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-1">
+                <div className="mb-6 md:mb-10">
+                    <h2 className="text-xl md:text-3xl px-3 font-bold text-[#00072c] mb-1">
                         Success Stories That <span className="text-[#f43144] mt-1 md:mt-2">Inspire Excellence</span>
                     </h2>
-                    <p className="text-lg md:text-xl text-gray-800 leading-relaxed">
+                    <p className="text-lg md:text-xl text-blue-950 leading-relaxed px-3 ">
                         Meet our successful candidates who cleared UPSC and are now serving the nation
                     </p>
                 </div>
 
                 {/* Testimonials Slider */}
-                <div className="relative">
-                    <div className="bg-slate-900 rounded-2xl md:rounded-3xl shadow-xl relative overflow-hidden">
+                <div className="relative md:px-0 px-2">
+                    <div className="bg-[#00072c] rounded-2xl md:rounded-3xl shadow-xl relative overflow-hidden">
                         {/* Decorative Quote Icon */}
                         <div className="absolute top-4 right-4 md:top-6 md:right-6 opacity-10 z-10">
                             <Quote className="w-16 h-16 md:w-24 md:h-24 text-yellow-400" />
@@ -173,7 +173,7 @@ const Testimonials = () => {
                                                 </div>
 
                                                 {/* Details Grid */}
-                                                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+                                                <div className="hidden md:grid sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
                                                     <div className="bg-gray-50 p-3 md:p-4 rounded-xl">
                                                         <h4 className="font-semibold text-gray-900 mb-1 md:mb-2 text-sm md:text-base">Background</h4>
                                                         <p className="text-gray-600 text-xs md:text-sm">{testimonial.background}</p>
@@ -228,7 +228,7 @@ const Testimonials = () => {
                                         }
                                     }}
                                     disabled={isSliding}
-                                    className={`w-6 h-2 md:w-7 md:h-3 rounded-full duration-300 disabled:cursor-not-allowed ${index === currentTestimonial
+                                    className={`hidden w-6 h-2 md:w-7 md:h-3 rounded-full duration-300 disabled:cursor-not-allowed ${index === currentTestimonial
                                         ? 'bg-orange-500 '
                                         : 'bg-gray-400 hover:bg-orange-400'
                                         }`}

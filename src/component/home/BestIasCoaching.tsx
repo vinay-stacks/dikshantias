@@ -35,7 +35,7 @@ const BestIasCoaching: React.FC = () => {
     },
     {
       id: 2,
-      title: 'Distance Learning Program',
+      title: 'Distance Learning',
       subtitle: 'Show more',
       bgColor: 'bg-purple-300',
       circleColor: 'bg-purple-500',
@@ -71,7 +71,7 @@ const BestIasCoaching: React.FC = () => {
       } else if (width >= 768) {
         setSlidesToShow(2);
       } else {
-        setSlidesToShow(1);
+        setSlidesToShow(2);
       }
     };
 
@@ -106,17 +106,17 @@ const BestIasCoaching: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 4000); // 4 seconds
+    }, 5000); // 4 seconds
     return () => clearInterval(interval); // Cleanup
   }, [currentSlide, maxSlides]);
 
   return (
-    <div className="bg-white py-8 md:py-16 px-4">
+    <div className="bg-white py-8 md:py-16 md:px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-12">
-          <h1 className="text-xl md:text-3xl lg:text-3xl font-bold text-gray-900 text-left">
+        <div className="mb-5">
+          <h2 className="text-xl md:text-3xl lg:text-3xl font-bold text-[#00072c] text-left px-2 md:px-0">
             Best <span className="text-[#f43144]"> IAS Coaching </span>Institute in India
-          </h1>
+          </h2>
         </div>
 
         <div className="relative">
@@ -189,21 +189,21 @@ interface CourseCardProps {
 const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
   return (
     <div
-      className={`${course.bgColor} rounded-3xl p-6 md:p-8 h-80 md:h-96 relative overflow-hidden group hover:shadow-lg transition-shadow duration-300`}
+      className={`${course.bgColor} rounded-3xl p-5 md:p-8 h-65 md:h-96 relative overflow-hidden group hover:shadow-lg transition-shadow duration-300`}
     >
       <div className="flex items-center gap-3 mb-4">
         <div className="p-2 bg-white rounded-lg shadow-sm">{course.icon}</div>
       </div>
 
-      <h3 className="text-[18px] md:text-2xl font-bold text-gray-900 mb-2">{course.title}</h3>
+      <h3 className="text-[15px] md:text-2xl font-bold text-[#00072c] mb-2">{course.title}</h3>
 
-      <p className="text-sm md:text-base text-gray-600 font-medium mb-8">{course.subtitle}</p>
+      <p className="text-sm md:text-base text-gray-600 font-medium mb-2">{course.subtitle}</p>
 
-      <div className="absolute bottom-6 right-6">
+      <div className="absolute bottom-4 right-4">
         <div
-          className={`${course.circleColor} rounded-full p-4 w-32 h-32 md:w-40 md:h-40 flex items-center justify-center overflow-hidden shadow-lg`}
+          className={`${course.circleColor} rounded-full p-4 w-25 h-25 md:w-40 md:h-40 flex items-center justify-center overflow-hidden shadow-lg`}
         >
-          <div className="relative w-20 h-16 md:w-24 md:h-20">
+          <div className="relative w-10 h-10 md:w-24 md:h-20">
             <div className="absolute inset-0 bg-white rounded-lg shadow-md transform rotate-12"></div>
             <div className="absolute inset-0 bg-white rounded-lg shadow-md transform -rotate-6 -translate-x-2">
               <div className="p-2 space-y-1">
@@ -211,7 +211,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
                 <div className="h-1 bg-gray-400 rounded w-3/4"></div>
                 <div className="h-1 bg-gray-400 rounded w-1/2"></div>
                 <div className="h-1 bg-gray-400 rounded w-2/3"></div>
-                <div className="h-1 bg-gray-400 rounded w-3/4"></div>
+                {/* <div className="h-1 bg-gray-400 rounded w-3/4"></div> */}
               </div>
             </div>
             <div className="absolute inset-0 bg-white rounded-lg shadow-lg">
@@ -220,8 +220,8 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
                 <div className="h-1 bg-gray-600 rounded w-1/2"></div>
                 <div className="h-1 bg-gray-600 rounded w-2/3"></div>
                 <div className="h-1 bg-gray-600 rounded w-3/4"></div>
-                <div className="h-1 bg-gray-600 rounded w-1/2"></div>
-                <div className="h-1 bg-gray-600 rounded w-2/3"></div>
+                {/* <div className="h-1 bg-gray-600 rounded w-1/2"></div>
+                <div className="h-1 bg-gray-600 rounded w-2/3"></div> */}
               </div>
             </div>
           </div>

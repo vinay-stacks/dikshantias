@@ -173,11 +173,11 @@ const FeatureUpsc: React.FC = () => {
   }, [nextSlide]);
 
   return (
-    <div className="bg-white py-6 md:py-16 md:px-4 px-2">
+    <div className="bg-white md:px-4 px-2 mb-6 md:mb-12">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6 text-start">
+          <h2 className="text-xl md:text-3xl font-bold text-[#00072c] mb-3 md:mb-5 text-start">
             Featured UPSC <span className="text-[#f43144]">Coaching Programs</span>
           </h2>
         </div>
@@ -251,7 +251,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({ program }) => {
 
       {/* Price */}
       <div className="absolute top-4 right-4 bg-white rounded-lg shadow p-2 z-10 text-sm">
-        <div className="text-gray-400 line-through text-xs">₹{program.originalPrice.toLocaleString()}</div>
+        <div className="text-blue-400 line-through text-xs">₹{program.originalPrice.toLocaleString()}</div>
         <div className="text-[#f43144] font-bold">₹{program.currentPrice.toLocaleString()}</div>
       </div>
 
@@ -262,8 +262,8 @@ const ProgramCard: React.FC<ProgramCardProps> = ({ program }) => {
 
       {/* Content */}
       <div className="p-4 flex flex-col h-auto">
-        <h3 className="text-lg font-bold text-gray-900">{program.title}</h3>
-        <p className="text-gray-600 text-sm mt-1 mb-3 line-clamp-2">{program.description}</p>
+        <h3 className="text-lg font-bold text-[#00072c]">{program.title}</h3>
+        <p className="text-[#000622] text-sm mt-1 mb-3 line-clamp-2">{program.description}</p>
 
         <div className="flex justify-between text-[#ee6b36] text-sm mb-3">
           <div className="flex items-center gap-1">
@@ -293,11 +293,11 @@ const ProgramCard: React.FC<ProgramCardProps> = ({ program }) => {
 
         {/* Buttons */}
 
-        <div className="mt-auto space-y-2">
-          <button className="w-full bg-[#f43144] hover:bg-[#d12a3a] text-white py-2 rounded-lg text-sm font-semibold flex items-center justify-center gap-1">
-            Enroll Now <ChevronRight className="w-4 h-4" />
+        <div className="mt-auto flex gap-2.5 items-center">
+          <button className="bg-blue-950 hover:bg-[#d12a3a] text-white py-2 px-5 rounded-lg text-sm font-semibold flex items-center justify-center gap-1">View Details</button>
+          <button className="bg-[#f43144] hover:bg-blue-950 text-white py-2 px-5 rounded-lg text-sm font-semibold flex items-center justify-center gap-1">
+            Enroll Now
           </button>
-          <button className="w-full text-gray-600 hover:text-gray-800 py-2 text-sm font-medium">View Details</button>
         </div>
       </div>
     </div>

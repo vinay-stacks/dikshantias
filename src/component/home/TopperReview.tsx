@@ -69,7 +69,7 @@ const maxIndex = Math.max(0, videos.length - itemsPerView);
 useEffect(() => {
   const interval = setInterval(() => {
     setCurrentIndex((prev) => (prev + 1 > maxIndex ? 0 : prev + 1));
-  }, 3000); // Change slide every 5 seconds
+  }, 5000); // Change slide every 5 seconds
 
   return () => clearInterval(interval);
 }, [maxIndex]);
@@ -93,10 +93,10 @@ useEffect(() => {
   };
 
   return (
-    <div className="py-10 px-4 bg-[#ecf4fc] mb-10">
+    <div className="py-5 px-1 bg-[#ecf4fc] mb-10 mt-10 md:mt-10">
       <div className="max-w-7xl mx-auto rounded-3xl">
-        <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-12 text-center">
-          Toppers Views About <span className="text-[#f43144]"> Dikshant IAS</span>
+        <h2 className="text-xl md:text-3xl font-bold text-[#00072c] mb-4 md:mb-5 px-3">
+          Views About <span className="text-[#f43144]"> Dikshant IAS</span>
         </h2>
 
         <div className="relative">
@@ -126,7 +126,7 @@ useEffect(() => {
                         className="w-full h-full rounded-lg"
                       ></iframe>
                     </div>
-                    <div className="p-3 text-gray-900 text-sm text-center font-bold bg-white">
+                    <div className="p-3 text-[#000622] text-sm text-center font-bold bg-white">
                       {video.title}
                     </div>
                   </div>

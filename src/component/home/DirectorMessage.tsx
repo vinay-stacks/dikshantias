@@ -21,7 +21,7 @@ const DirectorMessage: React.FC = () => {
             name: "Dr. S.S. Pandey",
             title: "Educator & Director, Dikshant IAS",
             company: "Dikshant IAS",
-            description: "Dr. SS Pandey is a contemporary sociologist from India who has been sensitive to contemporary social issues along with having a deep understanding of human society. Dr. SS Pandey has done PhD in Industrial Sociology from the Sociology Department of Banaras Hindu University and in the UNESCOchair project Vidya India, eminent anthropologist Dr. R. N. Worked as Research Assistant with Sasaram.",
+            description: "Dr. S. S. Pandey got his Ph.D. in 2000 on “Labour: Management Relations in India,” and after getting his Ph.D., he joined as a research assistant at Indira Gandhi Rashtriya Kala Kendra, New Delhi, with famous anthropologist Dr. B. N. Saraswati. In 2002, he joined as an assistant professor at Ram Manohar Lohia Awadh University, Faizabad, Uttar Pradesh (HNB PG College, Lalgang). He worked at the college for a year and then resigned from his job to teach UPSC aspirants.",
             hasImage: true,
             image: "/img/ss-pandey.jpg",
             url:"https://drsspandey.com/"
@@ -40,7 +40,7 @@ const DirectorMessage: React.FC = () => {
 
     return (
         <>
-            <div className='bg-[#ecf4fc] pb-18 px-2'>
+            <div className='bg-[#ecf4fc] py-18 px-2'>
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {founders.map((founder) => (
@@ -67,24 +67,24 @@ const DirectorMessage: React.FC = () => {
                                         <div className="h-full flex flex-col">
                                             {/* Header */}
                                             <div className="mb-4">
-                                                <h2 className="text-[18px] md:text-xl font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors duration-300">
+                                                <h2 className="text-[18px] md:text-xl font-bold text-[#00072c] mb-2 group-hover:text-[#000b41] transition-colors duration-300">
                                                     {founder.name}
                                                 </h2>
-                                                <p className="text-green-600 font-medium text-sm mb-1 group-hover:text-red-600 transition-colors duration-300">
+                                                <p className="text-[#092370] font-medium text-sm mb-1 group-hover:text-red-600 transition-colors duration-300">
                                                     {founder.title}
                                                 </p>
                                             </div>
 
                                             {/* Description */}
                                             <div className="flex-1">
-                                                <p className="text-gray-900 text-md text-justify leading-relaxed mb-4 group-hover:text-gray-800 transition-colors duration-300">
+                                                <p className="text-[#000622] text-md text-justify leading-relaxed mb-4 group-hover:text-gray-800 transition-colors duration-300">
                                                     {founder.description}
                                                 </p>
                                             </div>
 
                                             {/* Read More Link */}
                                             <div className="mt-auto mx-auto md:mx-0">
-                                                <Link href={founder.url} className="text-blue-500 font-semibold text-sm hover:text-blue-300 hover:underline transition-all duration-300 flex items-center group/btn">
+                                                <Link href={founder.url} className="text-[#b10208] font-semibold text-sm hover:text-[#c52a2f] hover:underline transition-all duration-300 flex items-center group/btn">
                                                     Read More
                                                     <svg
                                                         className="w-4 h-4 ml-1 transform group-hover/btn:translate-x-1 transition-transform duration-300"

@@ -82,12 +82,12 @@ const Footer: React.FC = () => {
   ];
 
   const socialMediaEnglish = [
-    { icon: Facebook, href: "https://facebook.com/dikshantias", label: "Facebook" },
-    { icon: Instagram, href: "https://instagram.com/dikshantias", label: "Instagram" },
-    { icon: Youtube, href: "https://youtube.com/dikshantias", label: "YouTube" },
-    { icon: Linkedin, href: "https://linkedin.com/company/dikshantias", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com/dikshantias", label: "Twitter" },
-    { icon: Send, href: "https://t.me/dikshantias", label: "Telegram" }
+    { icon: Facebook, href: "https://facebook.com/dikshantias", label: "Facebook", backgroundColor:"bg-[#3b579d]" },
+    { icon: Instagram, href: "https://instagram.com/dikshantias", label: "Instagram", backgroundColor:"bg-[#a408f3]"},
+    { icon: Youtube, href: "https://youtube.com/dikshantias", label: "YouTube", backgroundColor:"bg-red-600" },
+    { icon: Linkedin, href: "https://linkedin.com/company/dikshantias", label: "LinkedIn", backgroundColor:"bg-[#0274b3]" },
+    { icon: Twitter, href: "https://twitter.com/dikshantias", label: "Twitter", backgroundColor:"bg-[#1d9bf0]" },
+    { icon: Send, href: "https://t.me/dikshantias", label: "Telegram", backgroundColor:"bg-[#29a9eb]" }
   ];
 
   return (
@@ -138,46 +138,6 @@ const Footer: React.FC = () => {
           ))}
         </div>
 
-        {/* About UPSC CSE Section */}
-        <div className="mb-12">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">
-            About UPSC Civil Services Examination (UPSC CSE)
-          </h2>
-          <p className="text-sm text-gray-700 mb-4 leading-relaxed">
-            The UPSC Civil Services Examination (CSE) stands as one of the most esteemed competitive exams in India, conducted annually by the Union Public Service Commission. It is designed to recruit candidates for prominent government positions, including the IAS, IPS, and IFS. The selection process is highly competitive and consists of three stages: the Preliminary Examination, the Main Examination, and the Personality Test (Interview).
-          </p>
-
-          <h3 className="text-base font-semibold text-gray-900 mb-3">
-            Skills Required to Excel in UPSC CSE
-          </h3>
-          <p className="text-sm text-gray-700 mb-4 leading-relaxed">
-           The Preliminary Examination serves as an initial screening stage, designed to assess a candidate&apos;s fundamental knowledge and cognitive aptitude, helping identify serious contenders for the Mains. The Mains Examination delves deeper, testing an aspirant’s capacity for critical thinking, analytical reasoning, and effective written communication through structured and insightful answers. The final stage, the Interview (Personality Test), evaluates the candidate&apos;s intellectual depth, social awareness, and interpersonal skills — qualities essential for a successful career in the Civil Services.
-          </p>
-
-          <h3 className="text-base font-semibold text-gray-900 mb-3">
-            Achieving Success with Dikshant IAS
-          </h3>
-          <p className="text-sm text-gray-700 mb-4 leading-relaxed">
-            Dikshant IAS provides comprehensive support to civil services aspirants through a wide array of initiatives and services. Its holistic approach to preparation equips students with the essential skills and competencies needed to succeed at every stage of the UPSC CSE—be it the Prelims, Mains, or Personality Test.
-          </p>
-          <p className="text-sm text-gray-700 mb-4 leading-relaxed">
-            Dikshant IAS provides comprehensive and cutting-edge UPSC coaching through both online and offline/classroom platforms, ensuring students receive the best possible learning experience. The institute also offers its prestigious All India UPSC Mock Test Series covering GS Prelims, Mains, CSAT, Essay, and Optional Subjects, designed to facilitate regular evaluation and consistent enhancement of student performance.
-          </p>
-          <p className="text-sm text-gray-700 mb-4 leading-relaxed">
-            A dedicated and dynamic mentoring ecosystem delivers personalized guidance, helping students recognize their areas for improvement while providing targeted support to unlock their full potential and achieve success.
-          </p>
-          <p className="text-sm text-gray-700 mb-6 leading-relaxed">
-            Dikshant IAS is recognized as one of the leading IAS academies in the country, thanks to its strong presence across more than 10 cities and a robust online platform that reaches students nationwide. Known for its innovative approach to UPSC online coaching, the institute offers real-time support that empowers aspirants throughout their preparation journey. This commitment to excellence and accessibility makes Dikshant IAS a trusted destination for those aspiring to join the Civil Services and serve the nation.
-          </p>
-
-          <h3 className="text-base font-semibold text-gray-900 mb-3">
-            Become a part of the Dikshant IAS Community.
-          </h3>
-          <p className="text-sm text-gray-700 mb-6 leading-relaxed">
-            Stay informed about crucial UPSC preparation updates. Connect with the Dikshant IAS community on social media to remain engaged with our informative and collaborative network.
-          </p>
-        </div>
-
         {/* Social Media and Download App */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-8">
           <div className="flex flex-col sm:flex-row gap-8">
@@ -189,7 +149,7 @@ const Footer: React.FC = () => {
                   <a
                     key={index}
                     href={social.href}
-                    className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center hover:bg-[#f43144] hover:text-white transition-colors"
+                    className={`w-8 h-8 text-white rounded-full flex items-center justify-center hover:bg-[#f43144] hover:text-white transition-colors ${social.backgroundColor}` }
                     aria-label={social.label}
                     target='_blank'
                   >

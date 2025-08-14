@@ -1,4 +1,5 @@
 'use client';
+import DailyBlog from '@/component/DailyBlog';
 import BestIasCoaching from '@/component/home/BestIasCoaching';
 import BookFreeDemo from '@/component/home/BookFreeDemo';
 import DirectorMessage from '@/component/home/DirectorMessage';
@@ -18,15 +19,17 @@ function HomePage() {
     <>
       <HeroSlider />
       <TopperReview />
+      <Testimonials />
+      {/* <SuccessStart /> */}
       <OurProudAchivement />
-      <SuccessStart />
-      <DirectorMessage />
       <FeatureUpsc />
-      <BookFreeDemo />
+      <DirectorMessage />
+      {/* <BookFreeDemo /> */}
       <BestIasCoaching />
       <TabBestIasCoachingCenter />
-      <Testimonials />
-      <NewsUpdatesSection />
+      {/* <NewsUpdatesSection /> */}
+      <DailyBlog />
+
     </>
   )
 }

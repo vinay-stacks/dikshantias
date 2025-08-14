@@ -112,17 +112,17 @@ export default function OurProudAchivement() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide()
-    }, 3000) // change interval time (ms) if needed
+    }, 6000) // change interval time (ms) if needed
 
     return () => clearInterval(interval)
   }, [currentIndex, itemsPerView]) // Depends on these to keep logic updated
 
   return (
-    <div className="py-5 px-2 md:px-4 mb-20" style={{ backgroundColor: "#fff" }}>
-      <div className="max-w-7xl md:mx-auto">
-        <div className="bg-slate-900 backdrop-blur-sm rounded-3xl p-6 md:p-8 lg:p-12">
-          <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-12">
-            Our UPSC Toppers
+    <div className="py-5 px-2 md:px-4 mb-4" style={{ backgroundColor: "#fff" }}>
+      <div className="max-w-7xl md:mx-auto mt-7">
+        <div className="bg-[#ecf4fc] backdrop-blur-sm rounded-3xl p-6 md:p-8 lg:p-12">
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-[#00072c] mb-4 md:mb-12">
+            Our Results
           </h2>
 
           <div className="relative">
@@ -130,7 +130,7 @@ export default function OurProudAchivement() {
               <>
                 <button
                   onClick={prevSlide}
-                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-all duration-200"
+                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-[#a50309]/70 hover:bg-[#a50309] rounded-full p-2 transition-all duration-200"
                   aria-label="Previous slide"
                 >
                   <ChevronLeft className="w-6 h-6 text-white" />
@@ -138,7 +138,7 @@ export default function OurProudAchivement() {
 
                 <button
                   onClick={nextSlide}
-                  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-all duration-200"
+                  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-[#a50309]/70 hover:bg-[#a50309] rounded-full p-2 transition-all duration-200"
                   aria-label="Next slide"
                 >
                   <ChevronRight className="w-6 h-6 text-white" />
@@ -159,7 +159,7 @@ export default function OurProudAchivement() {
                     className="flex-shrink-0 px-3"
                     style={{ width: `${100 / itemsPerView}%` }}
                   >
-                    <div className="text-center bg-white/6 border border-gray-100/20 py-8 rounded-2xl">
+                    <div className="text-center bg-[#00072c] border border-[#000622] py-8 rounded-2xl">
                       <div className="relative inline-block mb-4">
                         <div className="w-25 h-25 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full overflow-hidden border-2 md:border-3 border-orange-400">
                           <Image
@@ -192,7 +192,7 @@ export default function OurProudAchivement() {
                   key={index}
                   onClick={() => goToSlide(index)}
                   className={`w-6 h-2 md:w-7 md:h-3 rounded-full transition-all duration-200 ${
-                    index === currentIndex ? "bg-white" : "bg-white/30"
+                    index === currentIndex ? "bg-[#a50309]" : "bg-[#a50309]/30"
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
