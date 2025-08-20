@@ -11,69 +11,47 @@ const Testimonials = () => {
     const testimonials = [
         {
             id: 1,
-            name: "Priya Sharma",
-            rank: "AIR 23",
-            year: "2024",
-            image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-            quote: "Dikshant IAS provided me with the perfect blend of traditional coaching and modern teaching methods. The faculty's guidance was instrumental in my success. The faculty's guidance was instrumental in my success.",
-            background: "B.Tech from IIT Delhi",
-            attempts: "2nd Attempt",
-            optional: "Sociology"
-        },
-        {
-            id: 2,
-            name: "Rajesh Kumar",
-            rank: "AIR 45",
-            year: "2024",
-            image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-            quote: "The answer writing sessions and personal mentorship made all the difference. The systematic approach helped me crack UPSC in my first attempt. The faculty's guidance was instrumental in my success. The faculty's guidance was instrumental in my success.",
-            background: "M.A. Political Science",
-            attempts: "1st Attempt",
-            optional: "Political Science"
-        },
-        {
-            id: 3,
-            name: "Anjali Patel",
-            rank: "AIR 67",
-            year: "2024",
-            image: "https://images.pexels.com/photos/2169434/pexels-photo-2169434.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-            quote: "As a working professional, the flexible timings and comprehensive study material were perfect. The current affairs modules kept me updated. The faculty's guidance was instrumental in my success. The faculty's guidance was instrumental in my success.",
-            background: "CA, Working Professional",
-            attempts: "3rd Attempt",
-            optional: "Commerce & Accountancy"
-        },
-        {
-            id: 4,
-            name: "Amit Singh",
-            rank: "AIR 89",
-            year: "2024",
-            image: "https://images.pexels.com/photos/2726111/pexels-photo-2726111.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-            quote: "The test series with detailed analysis helped me track my progress. The faculty's experience and dedication are truly commendable. The faculty's guidance was instrumental in my success. The faculty's guidance was instrumental in my success.",
-            background: "B.A. History (Hons)",
+            name: "Shruti Sharma",
+            rank: "AIR 1",
+            year: " UPSC CSE 2021",
+            image: "/img/result/shruti-sharma-result.jpg",
+            quote: "I had a great experience with Dikshant IAS — the feedback was deeply insightful, and the mock tests were designed to closely mirror the real exam, making my preparation more focused and effective.",
+            background: "BA Hounors (History)",
             attempts: "2nd Attempt",
             optional: "History"
         },
         {
-            id: 5,
-            name: "Sneha Reddy",
-            rank: "AIR 156",
-            year: "2024",
-            image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-            quote: "The structured approach and optional subject coaching were excellent. The peer learning environment was very motivating and supportive. The faculty's guidance was instrumental in my success. The faculty's guidance was instrumental in my success.",
-            background: "M.Sc. Geography",
-            attempts: "1st Attempt",
-            optional: "Geography"
+            id: 2,
+            name: " Gamini Singla",
+            rank: "AIR 03",
+            year: " UPSC CSE 2021",
+            image: "/img/result/gamini-result.jpg",
+            quote: "My journey with Dikshant IAS has been truly enriching. The experts’ guidance, diverse questions, and patient answers have helped me identify my strengths and work on my weaknesses. ",
+            background: "B.Tech Computer Science",
+            attempts: "2nd Attempt",
+            optional: "Sociology"
         },
         {
-            id: 6,
-            name: "Vikram Joshi",
-            rank: "AIR 234",
-            year: "2023",
-            image: "https://images.pexels.com/photos/3777931/pexels-photo-3777931.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-            quote: "The interview preparation gave me confidence to face the UPSC panel. Mock interviews with experienced panelists were crucial for my success. The faculty's guidance was instrumental in my success. The faculty's guidance was instrumental in my success.",
-            background: "B.E. Mechanical",
+            id: 3,
+            name: "Yaksh Chaudhary",
+            rank: "AIR 06",
+            year: "UPSC CSE 2021",
+            image: "/img/result/yaksh-chaudhary.jpg",
+            quote: "My association with Dikshant IAS has been both insightful and enriching. The experts combined practical simulations with in-depth guidance, asking highly relevant and current questions. ",
+            background: "B.Tech Civil",
             attempts: "3rd Attempt",
-            optional: "Mechanical Engineering"
+            optional: "Sociology"
+        },
+        {
+            id: 4,
+            name: "Sunil Kumar Dhanwanta",
+            rank: "AIR 22",
+            year: "UPSC CSE 2021",
+            image: "/img/result/sunil-kumar-dhanwanta.jpg",
+            quote: "The test series with detailed analysis helped me track my progress. The faculty's experience and dedication are truly commendable. The faculty's guidance was instrumental in my success. The faculty's guidance was instrumental in my success.",
+            background: "B.Tech Civil",
+            attempts: "4th Attempt",
+            optional: "Hindi Literature"
         }
     ];
 
@@ -108,7 +86,7 @@ const Testimonials = () => {
 
                 {/* Section Header */}
                 <div className="mb-6 md:mb-10">
-                    <h2 className="text-xl md:text-3xl px-3 font-bold text-[#00072c] mb-1">
+                    <h2 className="text-xl md:text-3xl px-3 font-bold text-[#040c33] mb-1">
                         Success Stories That <span className="text-[#f43144] mt-1 md:mt-2">Inspire Excellence</span>
                     </h2>
                     <p className="text-lg md:text-xl text-blue-950 leading-relaxed px-3 ">
@@ -118,7 +96,7 @@ const Testimonials = () => {
 
                 {/* Testimonials Slider */}
                 <div className="relative md:px-0 px-2">
-                    <div className="bg-[#00072c] rounded-2xl md:rounded-3xl shadow-xl relative overflow-hidden">
+                    <div className="bg-[#040c33] rounded-2xl md:rounded-3xl shadow-xl relative overflow-hidden">
                         {/* Decorative Quote Icon */}
                         <div className="absolute top-4 right-4 md:top-6 md:right-6 opacity-10 z-10">
                             <Quote className="w-16 h-16 md:w-24 md:h-24 text-yellow-400" />

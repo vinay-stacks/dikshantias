@@ -100,7 +100,7 @@ const ReadInHindu: React.FC = () => {
 
   return (
     <>
-    <div className='container max-w-7xl mx-auto my-4 px-2 md:px-0'>
+    <div className='container max-w-7xl mx-auto -mt-14 md:mt-3 my-4 px-2 md:px-0'>
         <Image src="/img/current-affairs-banner.webp" width={1920} height={500} alt='About Us' className='rounded-xl' />
     </div>
     
@@ -119,7 +119,7 @@ const ReadInHindu: React.FC = () => {
                     <div className="text-xs font-medium text-gray-600 uppercase tracking-wide">
                       {card.month}
                     </div>
-                    <div className="text-2xl md:text-3xl font-bold text-gray-800 leading-none">
+                    <div className="text-2xl md:text-3xl font-bold text-[#00072c] leading-none">
                       {card.date}
                     </div>
                     <div className="text-xs text-gray-600 mt-1">
@@ -129,7 +129,7 @@ const ReadInHindu: React.FC = () => {
                   
                   {/* Content Section */}
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-sm md:text-base font-semibold text-gray-800 leading-tight mb-3 line-clamp-2">
+                    <h3 className="text-sm md:text-base font-semibold text-[#00072c] leading-tight mb-3 line-clamp-2">
                       {card.title}
                     </h3>
                     

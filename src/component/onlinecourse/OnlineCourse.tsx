@@ -86,11 +86,11 @@ const CourseCard: React.FC<{ course: Course }> = ({ course }) => {
     return (
         <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             {/* Card Header with Image and Badge */}
-            <div className="relative h-32 bg-gradient-to-br from-gray-700 to-gray-900">
+            <div className="relative h-38 md:h-32 bg-gradient-to-br from-gray-700 to-gray-900">
                <div className="absolute">
                        <Image 
                                    src={course.image} 
-                                   width={500} 
+                                   width={900} 
                                    height={300} 
                                    alt={'Prilims'} 
                                    className="object-cover h-full w-full" 
@@ -115,12 +115,12 @@ const CourseCard: React.FC<{ course: Course }> = ({ course }) => {
             </div>
 
             {/* Card Content */}
-            <div className="p-6 mt-12">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{course.title}</h3>
+            <div className="p-6 mt-6 md:mt-12">
+                <h3 className="text-[18px] font-bold text-[#00072c] mb-2">{course.title}</h3>
                 {/* <p className="text-gray-600 text-sm mb-4">{course.description}</p> */}
 
                 {/* Duration and Students */}
-                <div className="flex items-center justify-between mb-4 text-sm text-gray-500">
+                <div className="flex items-center justify-between mb-4 text-sm text-[#00072c]">
                     <div className="flex items-center">
                         <Clock className="w-4 h-4 mr-1 text-orange-500" />
                         <span>{course.duration}</span>
@@ -139,7 +139,7 @@ const CourseCard: React.FC<{ course: Course }> = ({ course }) => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                     </button>
-                    <Link href={`/online-course/${course.url}`} className="w-full text-gray-600 hover:text-gray-800 font-medium py-2 transition-colors duration-200 ">
+                    <Link href={`/online-course/${course.url}`} className="w-full text-blue-800 hover:text-blue-950 font-medium py-2 transition-colors duration-200 ">
                         View Details
                     </Link>
                 </div>
@@ -154,14 +154,14 @@ const
 OnlineCourse: React.FC = () => {
     return (
         <>
-            <div className='container max-w-7xl mx-auto my-4 px-2 md:px-0'>
+            <div className='container max-w-7xl mx-auto my-4 -mt-14 md:mt-3 px-2 md:px-0'>
                 <Image src="/img/online-course/online-course-hero.webp" width={1920} height={500} alt='About Us' className='rounded-xl' />
             </div>
 
             {/* end of hero */}
             <div className="bg-gray-50 py-8 px-4 mb-8">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 -mt-7 md:mt-1 lg:grid-cols-4 gap-6">
                         {courses.map((course) => (
                             <CourseCard key={course.id} course={course} />
                         ))}

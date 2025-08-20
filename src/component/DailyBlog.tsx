@@ -16,23 +16,23 @@ const DailyBlog = () => {
 
   const quickResources: QuickResource[] = [
     {
-      title: 'Current Affairs',
+      title: 'Trending',
       subtitle: 'Daily & Monthly Updates',
       icon: <TrendingUp className="w-5 h-5" />,
       color: 'text-blue-600'
     },
-    {
-      title: 'Mock Tests',
-      subtitle: 'Practice Test Series',
-      icon: <FileText className="w-5 h-5" />,
-      color: 'text-green-600'
-    },
-    {
-      title: 'Study Material',
-      subtitle: 'Notes & Resources',
-      icon: <BookOpen className="w-5 h-5" />,
-      color: 'text-purple-600'
-    }
+    // {
+    //   title: 'Mock Tests',
+    //   subtitle: 'Practice Test Series',
+    //   icon: <FileText className="w-5 h-5" />,
+    //   color: 'text-green-600'
+    // },
+    // {
+    //   title: 'Study Material',
+    //   subtitle: 'Notes & Resources',
+    //   icon: <BookOpen className="w-5 h-5" />,
+    //   color: 'text-purple-600'
+    // }
   ];
 
   const getTypeColor = (type: string) => {

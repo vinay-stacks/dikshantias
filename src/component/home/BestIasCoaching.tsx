@@ -59,6 +59,15 @@ const BestIasCoaching: React.FC = () => {
       circleColor: 'bg-rose-300',
       icon: <FileText className="w-8 h-8 text-rose-700" />,
       image: '/api/placeholder/200/150'
+    },
+     {
+      id: 3,
+      title: 'Study Material',
+      subtitle: 'Notes & Resources',
+      bgColor: 'bg-blue-200',
+      circleColor: 'bg-blue-400',
+      icon: <BookOpen className="w-8 h-8 text-blue-500" />,
+      image: '/api/placeholder/200/150'
     }
   ];
 
@@ -114,7 +123,7 @@ const BestIasCoaching: React.FC = () => {
     <div className="bg-white py-8 md:py-16 md:px-4">
       <div className="max-w-7xl mx-auto">
         <div className="mb-5">
-          <h2 className="text-xl md:text-3xl lg:text-3xl font-bold text-[#00072c] text-left px-2 md:px-0">
+          <h2 className="text-xl md:text-3xl lg:text-3xl font-bold text-[#040c33] text-left px-2 md:px-0">
             Best <span className="text-[#f43144]"> IAS Coaching </span>Institute in India
           </h2>
         </div>
@@ -195,9 +204,9 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
         <div className="p-2 bg-white rounded-lg shadow-sm">{course.icon}</div>
       </div>
 
-      <h3 className="text-[15px] md:text-2xl font-bold text-[#00072c] mb-2">{course.title}</h3>
+      <h3 className="text-[15px] md:text-2xl font-bold text-[#040c33] mb-2">{course.title}</h3>
 
-      <p className="text-sm md:text-base text-gray-600 font-medium mb-2">{course.subtitle}</p>
+      <p className="text-sm md:text-base text-blue-950 font-medium mb-2">{course.subtitle}</p>
 
       <div className="absolute bottom-4 right-4">
         <div

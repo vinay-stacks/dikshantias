@@ -36,7 +36,7 @@ const toppers: Topper[] = [
     service: "CSE Result",
     year: "2021",
     rank: 6,
-    image: "/img/result/gamini-result.jpg",
+    image: "/img/result/yaksh-chaudhary.jpg",
   },
   {
     id: 4,
@@ -121,7 +121,7 @@ export default function OurProudAchivement() {
     <div className="py-5 px-2 md:px-4 mb-4" style={{ backgroundColor: "#fff" }}>
       <div className="max-w-7xl md:mx-auto mt-7">
         <div className="bg-[#ecf4fc] backdrop-blur-sm rounded-3xl p-6 md:p-8 lg:p-12">
-          <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-[#00072c] mb-4 md:mb-12">
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-[#040c33] mb-4 md:mb-12">
             Our Results
           </h2>
 
@@ -159,7 +159,7 @@ export default function OurProudAchivement() {
                     className="flex-shrink-0 px-3"
                     style={{ width: `${100 / itemsPerView}%` }}
                   >
-                    <div className="text-center bg-[#00072c] border border-[#000622] py-8 rounded-2xl">
+                    <div className="text-center bg-[#040c33] border border-[#000622] py-8 rounded-2xl">
                       <div className="relative inline-block mb-4">
                         <div className="w-25 h-25 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full overflow-hidden border-2 md:border-3 border-orange-400">
                           <Image

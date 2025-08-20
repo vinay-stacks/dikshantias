@@ -19,17 +19,9 @@ export default function SlidingButtons({ className = "" }: SlidingButtonsProps):
 
   const buttons: ButtonData[] = [
     {
-      id: 1,
-      icon: Download,
-      text: "DOWNLOAD DIKSHANT LEARNING APP",
-      bgColor: "bg-purple-200",
-      textColor: "text-purple-900",
-      iconBg: "bg-purple-400"
-    },
-    {
       id: 2,
       icon: Globe,
-      text: "HINDI WEBSITE PAR JAYE",
+      text: "हिंदी वेबसाइट पर जाए",
       bgColor: "bg-yellow-200",
       textColor: "text-yellow-900",
       iconBg: "bg-yellow-400"
@@ -37,10 +29,18 @@ export default function SlidingButtons({ className = "" }: SlidingButtonsProps):
     {
       id: 3,
       icon: Globe2,
-      text: "ENGLISH WEBSITE PAR JAYE",
+      text: "VISIT OUR ENGLISH WEBSITE",
       bgColor: "bg-green-200",
       textColor: "text-green-900",
       iconBg: "bg-green-600"
+    },
+    {
+      id: 1,
+      icon: Download,
+      text: "DOWNLOAD DIKSHANT LEARNING APP",
+      bgColor: "bg-purple-200",
+      textColor: "text-purple-900",
+      iconBg: "bg-purple-400"
     }
   ];
 

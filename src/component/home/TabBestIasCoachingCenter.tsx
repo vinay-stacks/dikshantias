@@ -20,7 +20,7 @@ const tabsData: TabData[] = [
         hoverColor: 'hover:bg-red-500',
         cardTitle: '20+ Years Journey of Excellence',
         description: 'We are India\'s well-known Institute and the Best IAS Coaching in India preparing candidates for the Civil Services Examination at all three levels- Prelims, Mains & personality test.',
-        icon: <Award className="w-16 h-16 text-red-700" />
+        icon: <Award className="w-16 h-16 text-[#d3b054]" />
     },
     {
         id: 'faculty',
@@ -29,7 +29,7 @@ const tabsData: TabData[] = [
         hoverColor: 'hover:bg-blue-500',
         cardTitle: 'Experienced Faculty Members',
         description: 'Our IAS Coaching Center in Delhi is equipped with the team of top most faculties for preparation of UPSC (Prelims+Mains) who are known for producing best results year after year.',
-        icon: <Users className="w-16 h-16 text-red-700" />
+        icon: <Users className="w-16 h-16 text-[#d3b054]" />
     },
     {
         id: 'materials',
@@ -38,7 +38,7 @@ const tabsData: TabData[] = [
         hoverColor: 'hover:bg-green-500',
         cardTitle: 'Best Study Materials',
         description: 'Our students always receive well curated study resources, which helps them stay on task and saves them time.',
-        icon: <BookOpen className="w-16 h-16 text-red-700" />
+        icon: <BookOpen className="w-16 h-16 text-[#d3b054]" />
     },
     {
         id: 'interview',
@@ -47,7 +47,7 @@ const tabsData: TabData[] = [
         hoverColor: 'hover:bg-orange-500',
         cardTitle: 'Best Mock Interview Programme',
         description: 'Dikshant IAS, a pioneer in the industry, offers the Best Mock Interview Program in India and boasts the most knowledgeable IAS interview panel in the nation, which comprises Prof. D. P. Agarwal, former board members, top bureaucrats, and academicians.',
-        icon: <MessageSquare className="w-16 h-16 text-red-700" />
+        icon: <MessageSquare className="w-16 h-16 text-[#d3b054]" />
     },
     {
         id: 'seminar',
@@ -56,7 +56,7 @@ const tabsData: TabData[] = [
         hoverColor: 'hover:bg-pink-500',
         cardTitle: 'Seminar and Topper Class',
         description: 'We organize seminars and topper classes to teach students how to prepare for the UPSC; where seasoned UPSC professionals assist students for their doubts.',
-        icon: <Star className="w-16 h-16 text-red-700" />
+        icon: <Star className="w-16 h-16 text-[#d3b054]" />
     }
 ];
 
@@ -105,11 +105,11 @@ export default function TabBestIasCoachingCenter() {
                                         <div className="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-slate-100 to-slate-200 rounded-2xl flex items-center justify-center shadow-lg transform hover:rotate-6 transition-transform duration-300">
                                             {activeTab === 'journey' ? (
                                                 <div className="text-center">
-                                                    <div className="text-2xl md:text-3xl font-bold text-red-700">20</div>
-                                                    <div className="text-xs text-red-700 opacity-90">YEARS</div>
+                                                    <div className="text-2xl md:text-3xl font-bold text-[#d3b054]">20</div>
+                                                    <div className="text-xs text-[#d3b054] opacity-90">YEARS</div>
                                                     <div className="flex justify-center mt-1">
                                                         {[...Array(3)].map((_, i) => (
-                                                            <Star key={i} className="w-3 h-3 text-red-700 fill-current" />
+                                                            <Star key={i} className="w-3 h-3 text-[#d3b054] fill-current" />
                                                         ))}
                                                     </div>
                                                 </div>

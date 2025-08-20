@@ -11,13 +11,13 @@ interface FaqItem {
 const faqs: FaqItem[] = [
   {
     id: 1,
-    title: 'PROGRAMME - 1: 60% Scholarship Programme for BPL students',
+    title: 'PROGRAMME - 1: 60% Scholarship Programme for BPL Students',
     content: (
-      <div className="text-md text-gray-800 px-4 pb-4">
-        <p>
+      <div className="text-md text-[#040c33] px-4 pb-4 text-left">
+        <p className='text-blue-950'>
           Providing coaching to the students of <strong>BPL</strong> under this program, 60% scholarship is provided in the fees (Online/Offline) for people residing in India (100 students per Year). The following certificates are required to be submitted to take advantage of this program.
         </p>
-        <ul className="list-disc pl-6 mt-2 text-gray-800">
+        <ul className="list-disc pl-6 mt-2 text-blue-950">
           <li><em>Aadhar Card</em></li>
           <li><em>BPL Card</em></li>
           <li><em>4 Passport size photograph</em></li>
@@ -30,14 +30,14 @@ const faqs: FaqItem[] = [
   },
   {
     id: 2,
-    title: 'PROGRAMME - 2: 50% Scholarship PROGRAMME FOR SC/ST/OBC/Minorities/Girls/EWS/Defence Wards STUDENTS.',
+    title: 'PROGRAMME - 2: 50% Scholarship PROGRAMME FOR SC / ST / OBC / Minorities / Girls / EWS / Defence Wards Students.',
     content: (
-      <div className="text-md text-gray-800 px-4 pb-4">
-        <p>
-          Under this program, 50% scholarship in fees is provided for coaching (online/offline) to unreserved category of<strong>SC/ST/OBC/Minorities/Girls/EWS/Defence Wards.</strong>  The following certificates are required to be submitted to take advantage of this program.
+      <div className="text-md text-[#040c33] px-4 pb-4 text-left">
+        <p className='text-blue-950'>
+          Under this program, 50% scholarship in fees is provided for coaching (online/offline) to unreserved category of <strong>SC/ST/OBC/Minorities/Girls/EWS/Defence Wards.</strong>  The following certificates are required to be submitted to take advantage of this program.
 
         </p>
-        <ul className="list-disc pl-6 mt-2 text-gray-800">
+        <ul className="list-disc pl-6 mt-2 text-blue-950">
           <li><em>Aadhar Card</em></li>
           <li><em>Caste Certificate / Minorities Certificate & Annual family income certificate of less than Rs. 8 lakhs</em></li>
             <li><em>Any Valid documents certifying Defence Personal.</em></li>
@@ -53,12 +53,12 @@ const faqs: FaqItem[] = [
     id: 3,
     title: 'PROGRAMME - 3: 40% Scholarship Programme for Meritorious Students',
     content: (
-      <div className="text-md text-gray-800 px-4 pb-4">
-        <p>
+      <div className="text-md text-[#040c33] px-4 pb-4 text-left">
+        <p className='text-blue-950'>
          Under this program, 40% scholarship in fees is provided for coaching (online/offline) to Meritorious Students (only for 50 students per year). The following documents are required to be submitted to take advantage of this program. A simple aptitude test will be conducted online / Oflline
 
         </p>
-        <ul className="list-disc pl-6 mt-2 text-gray-800">
+        <ul className="list-disc pl-6 mt-2 text-blue-950">
           <li><em>Aadhar Card</em></li>
           <li><em>4 Passport size photograph</em></li>          
         </ul>

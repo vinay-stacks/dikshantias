@@ -177,7 +177,7 @@ const FeatureUpsc: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h2 className="text-xl md:text-3xl font-bold text-[#00072c] mb-3 md:mb-5 text-start">
+          <h2 className="text-xl md:text-3xl font-bold text-[#040c33] mb-3 md:mb-5 text-start">
             Featured UPSC <span className="text-[#f43144]">Coaching Programs</span>
           </h2>
         </div>
@@ -262,8 +262,8 @@ const ProgramCard: React.FC<ProgramCardProps> = ({ program }) => {
 
       {/* Content */}
       <div className="p-4 flex flex-col h-auto">
-        <h3 className="text-lg font-bold text-[#00072c]">{program.title}</h3>
-        <p className="text-[#000622] text-sm mt-1 mb-3 line-clamp-2">{program.description}</p>
+        <h3 className="text-lg font-bold text-[#040c33]">{program.title}</h3>
+        <p className="text-blue-950 text-sm mt-1 mb-3 line-clamp-2">{program.description}</p>
 
         <div className="flex justify-between text-[#ee6b36] text-sm mb-3">
           <div className="flex items-center gap-1">
@@ -279,7 +279,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({ program }) => {
         {/* Features */}
         <div className="space-y-2 mb-4">
           {program.features.slice(0, 2).map((feature, i) => (
-            <div key={i} className="flex items-center gap-2 text-sm text-gray-700">
+            <div key={i} className="flex items-center gap-2 text-sm text-blue-950">
               <CheckCircle className="w-4 h-4 text-green-500" />
               {feature}
             </div>

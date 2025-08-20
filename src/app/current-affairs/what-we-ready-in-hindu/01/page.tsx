@@ -4,13 +4,13 @@ import React from 'react';
 
 const OrderedListArrowCards: React.FC = () => {
   return (
-    <div className="px-2 py-6 md:px-8 mb-7">
+    <div className="px-2 py-6 md:px-8 mb-7 -mt-14 md:mt-3">
       <div className="max-w-7xl mx-auto bg-slate-100 p-6 rounded-xl">
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center md:text-left">
+        <h1 className="text-2xl md:text-3xl font-bold text-[#00072c] mb-6 text-center md:text-left">
           2 August 2025 – What to Read in The Hindu
         </h1>
 
-        <ol className="list-decimal list-inside space-y-3 text-gray-700 text-base md:text-lg">
+        <ol className="list-decimal list-inside space-y-3 text-blue-950 text-base md:text-lg">
           <li>
             Trump unveils slew of new tariffs on nearly 70 nations; Canada faces punitive levy – Page 1 – The Hindu – GS2 (IR)
           </li>

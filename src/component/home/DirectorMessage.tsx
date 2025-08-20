@@ -67,7 +67,7 @@ const DirectorMessage: React.FC = () => {
                                         <div className="h-full flex flex-col">
                                             {/* Header */}
                                             <div className="mb-4">
-                                                <h2 className="text-[18px] md:text-xl font-bold text-[#00072c] mb-2 group-hover:text-[#000b41] transition-colors duration-300">
+                                                <h2 className="text-[18px] md:text-xl font-bold text-[#040c33] mb-2 group-hover:text-[#000b41] transition-colors duration-300">
                                                     {founder.name}
                                                 </h2>
                                                 <p className="text-[#092370] font-medium text-sm mb-1 group-hover:text-red-600 transition-colors duration-300">
@@ -77,7 +77,7 @@ const DirectorMessage: React.FC = () => {
 
                                             {/* Description */}
                                             <div className="flex-1">
-                                                <p className="text-[#000622] text-md text-justify leading-relaxed mb-4 group-hover:text-gray-800 transition-colors duration-300">
+                                                <p className="text-blue-950 text-md text-justify leading-relaxed mb-4 group-hover:text-blue-950 transition-colors duration-300">
                                                     {founder.description}
                                                 </p>
                                             </div>
