@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import Link from "next/link"
 
 interface Topper {
   id: number
@@ -54,14 +55,14 @@ const toppers: Topper[] = [
     rank: 1,
     image: "/img/result/shruti-sharma-result.jpg",
   },
-  {
-    id: 6,
-    name: "Arjun Reddy",
-    service: "IFS",
-    year: "2023",
-    rank: 34,
-    image: "/img/result/gamini-result.jpg",
-  },
+  // {
+  //   id: 6,
+  //   name: "Arjun Reddy",
+  //   service: "IFS",
+  //   year: "2023",
+  //   rank: 34,
+  //   image: "/img/result/gamini-result.jpg",
+  // },
 ]
 
 export default function OurProudAchivement() {
@@ -121,9 +122,12 @@ export default function OurProudAchivement() {
     <div className="py-5 px-2 md:px-4 mb-4" style={{ backgroundColor: "#fff" }}>
       <div className="max-w-7xl md:mx-auto mt-7">
         <div className="bg-[#ecf4fc] backdrop-blur-sm rounded-3xl p-6 md:p-8 lg:p-12">
-          <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-[#040c33] mb-4 md:mb-12">
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-[#040c33] mb-4 md:mb-4">
             Our Results
           </h2>
+
+          <p className="text-blue-950 mb-4 md:mb-10">For the last 21 years, Dikshant IAS has been shaping the success stories of aspirants. With consistent and remarkable results, we have established ourselves as one of the most trusted institutes for UPSC examinations.<br/>
+          Every year, a large number of our students secure top ranks in Civil Services. This consistent success is the outcome of our experienced faculty, quality study material, and student-focused approach. The results stand as a testimony to our commitment to excellence.</p>
 
           <div className="relative">
             {toppers.length > itemsPerView && (
@@ -184,8 +188,15 @@ export default function OurProudAchivement() {
             </div>
           </div>
 
-          {/* Dots Indicator */}
-          {toppers.length > itemsPerView && (
+          {/* view all result button */}
+          <div className="flex justify-center mt-8">
+            <Link href="#" className="px-4 py-2 bg-[#a50309] text-white rounded-md">
+              View All Results
+            </Link>
+          </div>
+
+          {/* end of view all result button */}
+          {/* {toppers.length > itemsPerView && (
             <div className="flex justify-center mt-8 space-x-2">
               {Array.from({ length: maxIndex + 1 }).map((_, index) => (
                 <button
@@ -198,7 +209,7 @@ export default function OurProudAchivement() {
                 />
               ))}
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </div>

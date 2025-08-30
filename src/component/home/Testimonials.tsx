@@ -48,7 +48,7 @@ const Testimonials = () => {
             rank: "AIR 22",
             year: "UPSC CSE 2021",
             image: "/img/result/sunil-kumar-dhanwanta.jpg",
-            quote: "The test series with detailed analysis helped me track my progress. The faculty's experience and dedication are truly commendable. The faculty's guidance was instrumental in my success. The faculty's guidance was instrumental in my success.",
+            quote: "The test series with detailed analysis helped me track my progress. The faculty's experience and dedication are truly commendable. The faculty's guidance was instrumental in my success.",
             background: "B.Tech Civil",
             attempts: "4th Attempt",
             optional: "Hindi Literature"
